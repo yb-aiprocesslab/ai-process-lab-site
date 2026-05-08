@@ -3,311 +3,920 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Process LAB — Simplifiez, Automatisez, Accélérez!</title>
-<meta name="description" content="AI Process LAB aide les indépendants et petites entreprises à rendre leur business automatique et prévisible grâce au no-code et à l'IA. Audit gratuit.">
 
-<!-- Canonical / Robots -->
+<title>AI Process LAB — Fiabilisez votre cycle commercial</title>
+
+<meta name="description" content="AI Process LAB aide les PME à fiabiliser le traitement des leads, automatiser les relances et structurer leur cycle commercial pour sécuriser leur chiffre d’affaires.">
+
 <link rel="canonical" href="https://www.ai-process-lab.com/">
 <meta name="robots" content="index,follow">
 
-<!-- Open Graph / Twitter -->
-<meta property="og:title" content="AI Process LAB — Simplifiez, Automatisez, Accélérez!">
-<meta property="og:description" content="AI Process LAB aide les indépendants et petites entreprises à rendre leur business automatique et prévisible grâce au no-code et à l'IA. Audit gratuit.">
+<meta property="og:title" content="AI Process LAB — Fiabilisez votre cycle commercial">
+<meta property="og:description" content="Structuration commerciale, suivi des leads et automatisation des relances pour PME.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.ai-process-lab.com/">
 <meta property="og:image" content="https://www.ai-process-lab.com/og-image.png">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Process LAB — Simplifiez, Automatisez, Accélérez!">
-<meta name="twitter:description" content="AI Process LAB aide les indépendants et petites entreprises à rendre leur business automatique et prévisible grâce au no-code et à l'IA. Audit gratuit.">
-<meta name="twitter:image" content="https://www.ai-process-lab.com/og-image.png">
-
-<!-- Favicon -->
 <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "AI Process LAB",
-  "url": "https://www.ai-process-lab.com",
-  "logo": "https://www.ai-process-lab.com/logo.png",
-  "sameAs": []
-}
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
+
 :root{
---clr-bg:#f5f9fc;
+--clr-bg:#f5f7fb;
 --clr-card:#ffffff;
---clr-primary:#0a2540;
---clr-primary-dark:#081a2e;
+--clr-primary:#0b1f3a;
+--clr-primary-dark:#071426;
+--clr-accent:#2563eb;
 --clr-text:#0f172a;
---clr-muted:#526070;
---radius:16px;
---transition:0.4s ease;
---shadow:0 8px 24px rgba(0,0,0,0.08);
---header-height:120px;
+--clr-muted:#64748b;
+--radius:24px;
+--transition:0.35s ease;
+--shadow:0 15px 45px rgba(15,23,42,0.08);
+--header-height:110px;
 --modal-bg:rgba(0,0,0,0.6);
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html {scroll-behavior: smooth;}
-body{font-family:'Inter',system-ui;background:var(--clr-bg);color:var(--clr-text);line-height:1.6;}
-a{text-decoration:none;color:inherit;}
-.container{max-width:1200px;margin:0 auto;padding:0 20px;}
-header{padding:16px 0;position:sticky;top:0;background:var(--clr-card);z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
-nav{display:flex;justify-content:space-between;align-items:center;}
-.logo img{height:120px;display:block;}
-.nav-links{list-style:none;display:flex;gap:32px;align-items:center;}
-.nav-links a{font-weight:600;color:var(--clr-text);position:relative;transition:var(--transition);}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--clr-primary);transition:var(--transition);}
-.nav-links a:hover::after{width:100%;}
 
-/* Hero */
-section{padding:100px 0;scroll-margin-top:calc(var(--header-height)+20px);}
-h2.section-title{font-size:2.5rem;text-align:center;margin-bottom:16px;color:var(--clr-primary);}
-p.section-subtitle{text-align:center;margin-bottom:50px;color:var(--clr-muted);font-size:1.1rem;}
-.hero{padding:140px 20px 100px;text-align:center;background:linear-gradient(135deg,#e6ebf5,#f5f9fc);border-bottom:2px solid #d0e6f1;}
-.hero h1{font-size:clamp(36px,6vw,60px);margin-bottom:20px;color:var(--clr-primary);}
-.hero p.tagline{font-size:1.5rem;margin-bottom:16px;color:var(--clr-text);}
-.hero p.description{max-width:800px;margin:0 auto 32px;color:var(--clr-muted);}
-.btn{display:inline-block;padding:14px 36px;border-radius:var(--radius);font-weight:600;transition:var(--transition);}
-.btn-primary{background:var(--clr-primary);color:white;text-align:center;display:inline-block;}
-.btn-primary:hover{background:var(--clr-primary-dark);transform:translateY(-2px);}
-.audit-btn-wrapper{text-align:center;margin:40px 0;touch-action: manipulation;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-.why-grid,.services-grid,.testimonials-grid,.about-grid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
-.why-card,.service-card,.testimonial-card,.use-case,.about-card{background:var(--clr-card);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition);text-align:center;opacity:0;transform:translateY(30px);}
-.visible{opacity:1;transform:translateY(0);transition:all 0.8s ease-out;}
-.service-icon{font-size:2.5rem;margin-bottom:12px;color:var(--clr-primary);}
-.use-case h3{margin-bottom:12px;color:var(--clr-primary);}
-.use-case p{line-height:1.6;}
-.result-box{margin-top:12px;padding:16px;background:var(--clr-primary);color:white;border-radius:var(--radius);}
+html{
+scroll-behavior:smooth;
+}
 
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
-.contact-info{padding:40px;background:linear-gradient(135deg,#e6ebf5,#f5f9fc);border-radius:var(--radius);box-shadow:var(--shadow);}
-.contact-info h3{margin-bottom:24px;}
-.contact-info p{margin-bottom:12px;font-size:1rem;}
-.contact-info a{color:var(--clr-primary);font-weight:600;}
-.contact-form iframe{width:100%;height:650px;border:none;border-radius:var(--radius);box-shadow:var(--shadow);}
-.contact-icon{font-size:24px;color:var(--clr-primary);vertical-align:middle;margin-right:8px;}
+body{
+font-family:'Inter',sans-serif;
+background:var(--clr-bg);
+color:var(--clr-text);
+line-height:1.7;
+overflow-x:hidden;
+position:relative;
+}
 
-footer{text-align:center;padding:40px 0;background:var(--clr-primary-dark);color:white;font-size:0.95rem;}
-footer a{color:#f5f9fc;margin:0 8px;}
+body::before{
+content:'';
+position:fixed;
+top:-200px;
+right:-200px;
+width:650px;
+height:650px;
+background:radial-gradient(circle,rgba(37,99,235,0.10),transparent 70%);
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+bottom:-250px;
+left:-250px;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(15,23,42,0.08),transparent 70%);
+z-index:-1;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+max-width:1240px;
+margin:0 auto;
+padding:0 24px;
+}
+
+header{
+padding:16px 0;
+position:sticky;
+top:0;
+background:rgba(255,255,255,0.88);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+z-index:1000;
+border-bottom:1px solid rgba(15,23,42,0.05);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
+}
+
+.logo img{
+height:110px;
+display:block;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:34px;
+align-items:center;
+}
+
+.nav-links a{
+font-weight:600;
+font-size:0.96rem;
+color:var(--clr-text);
+position:relative;
+}
+
+.nav-links a::after{
+content:'';
+position:absolute;
+bottom:-6px;
+left:0;
+width:0;
+height:2px;
+background:var(--clr-accent);
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+/* MENU BURGER */
+
+.menu-toggle{
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+font-size:38px;
+color:var(--clr-primary);
+z-index:1100;
+}
+
+.mobile-menu-active{
+display:flex !important;
+flex-direction:column;
+position:absolute;
+top:100%;
+right:0;
+width:100%;
+background:white;
+padding:25px;
+border-radius:0 0 24px 24px;
+box-shadow:0 20px 50px rgba(15,23,42,0.12);
+gap:22px;
+align-items:flex-start;
+}
+
+section{
+padding:120px 0;
+scroll-margin-top:120px;
+position:relative;
+}
+
+.hero{
+padding:160px 20px 130px;
+text-align:center;
+background:
+linear-gradient(135deg,#eef4ff 0%,#ffffff 50%,#f8fbff 100%);
+border-bottom:1px solid rgba(15,23,42,0.05);
+}
+
+.hero h1{
+font-size:clamp(54px,7vw,82px);
+line-height:1.02;
+letter-spacing:-3px;
+font-weight:800;
+max-width:1100px;
+margin:0 auto 30px;
+color:var(--clr-primary);
+}
+
+.hero p.tagline{
+font-size:1.35rem;
+font-weight:600;
+line-height:1.6;
+max-width:920px;
+margin:0 auto 22px;
+color:#10243f;
+}
+
+.hero p.description{
+max-width:860px;
+margin:0 auto 42px;
+font-size:1.08rem;
+line-height:1.9;
+color:var(--clr-muted);
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
+border-radius:16px;
+font-weight:600;
+transition:all .3s ease;
+font-size:1rem;
+cursor:pointer;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#0f172a,#1d4ed8);
+color:white;
+box-shadow:0 15px 35px rgba(29,78,216,0.22);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 22px 45px rgba(29,78,216,0.28);
+}
+
+.audit-btn-wrapper{
+text-align:center;
+margin-top:25px;
+}
+
+h2.section-title{
+font-size:clamp(38px,5vw,58px);
+line-height:1.1;
+letter-spacing:-2px;
+text-align:center;
+margin-bottom:24px;
+color:var(--clr-primary);
+font-weight:800;
+max-width:950px;
+margin-left:auto;
+margin-right:auto;
+}
+
+p.section-subtitle{
+text-align:center;
+margin-bottom:75px;
+color:var(--clr-muted);
+font-size:1.12rem;
+line-height:1.9;
+max-width:850px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* ✅ FIX GRID 3 / 3 PROPRE */
+.why-grid,
+.services-grid,
+.about-grid{
+display:grid;
+gap:28px;
+grid-template-columns:repeat(3, 1fr);
+}
+
+.why-card,
+.service-card,
+.use-case,
+.about-card{
+background:rgba(255,255,255,0.92);
+padding:42px;
+border-radius:28px;
+box-shadow:var(--shadow);
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+}
+
+.why-card:hover,
+.service-card:hover,
+.use-case:hover,
+.about-card:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 60px rgba(15,23,42,0.12);
+}
+
+.service-icon{
+font-size:2rem;
+margin-bottom:26px;
+color:#2563eb;
+background:rgba(37,99,235,0.08);
+padding:16px;
+border-radius:18px;
+width:72px;
+height:72px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.why-card h3,
+.service-card h3,
+.use-case h3,
+.about-card h3{
+font-size:1.45rem;
+line-height:1.3;
+margin-bottom:18px;
+font-weight:700;
+color:var(--clr-primary);
+}
+
+.why-card p,
+.service-card p,
+.use-case p,
+.about-card p{
+font-size:1rem;
+line-height:1.9;
+color:var(--clr-muted);
+}
+
+.use-case{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.result-box{
+margin-top:28px;
+padding:22px;
+background:linear-gradient(135deg,#0f172a,#1e3a5f);
+color:white;
+border-radius:20px;
+font-weight:600;
+line-height:1.7;
+font-size:0.98rem;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+.contact-info{
+padding:48px;
+background:linear-gradient(135deg,#f8fbff,#eef4ff);
+border-radius:28px;
+box-shadow:0 20px 50px rgba(15,23,42,0.08);
+}
+
+.contact-info h3{
+font-size:2rem;
+line-height:1.2;
+margin-bottom:28px;
+color:var(--clr-primary);
+}
+
+.contact-info p{
+margin-bottom:18px;
+font-size:1.04rem;
+}
+
+.contact-info a{
+color:var(--clr-primary);
+font-weight:600;
+}
+
+.contact-form iframe{
+width:100%;
+height:680px;
+border:none;
+border-radius:28px;
+box-shadow:var(--shadow);
+background:white;
+}
+
+.contact-icon{
+font-size:24px;
+color:var(--clr-accent);
+vertical-align:middle;
+margin-right:10px;
+}
+
+footer{
+text-align:center;
+padding:50px 20px;
+background:var(--clr-primary-dark);
+color:white;
+font-size:0.95rem;
+margin-top:100px;
+}
+
+footer a{
+color:white;
+margin:0 10px;
+}
 
 /* Modal */
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:var(--modal-bg);z-index:2000;justify-content:center;align-items:center;padding:20px;}
-.modal-content{background:white;border-radius:var(--radius);max-width:800px;width:100%;max-height:80%;overflow-y:auto;padding:30px;position:relative;box-shadow:var(--shadow);}
-.modal-content h3{margin-bottom:16px;color:var(--clr-primary);}
-.modal-content p{margin-bottom:12px;line-height:1.5;color:var(--clr-text);}
-.modal-close{position:absolute;top:16px;right:16px;font-size:24px;cursor:pointer;color:var(--clr-primary);}
-.modal-content::-webkit-scrollbar{width:8px;}
-.modal-content::-webkit-scrollbar-thumb{background:var(--clr-primary);border-radius:8px;}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:var(--modal-bg);
+z-index:2000;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.modal-content{
+background:white;
+border-radius:24px;
+max-width:820px;
+width:100%;
+max-height:85%;
+overflow-y:auto;
+padding:40px;
+position:relative;
+box-shadow:0 25px 60px rgba(0,0,0,0.2);
+}
+
+.modal-content h3{
+margin-bottom:20px;
+font-size:2rem;
+color:var(--clr-primary);
+}
+
+.modal-content p{
+margin-bottom:16px;
+line-height:1.8;
+color:var(--clr-text);
+}
+
+.modal-close{
+position:absolute;
+top:16px;
+right:20px;
+font-size:28px;
+cursor:pointer;
+color:var(--clr-primary);
+}
+
+/* MOBILE FIX PROPRE */
+@media(max-width:1100px){
+.why-grid,
+.services-grid,
+.about-grid{
+grid-template-columns:repeat(2, 1fr);
+}
+}
 
 @media(max-width:900px){
-:root{--header-height:96px;}
-.hero h1{font-size:2.5rem;}
-.logo img{height:90px;}
-.nav-links{display:none;flex-direction:column;gap:15px;position:absolute;top:100%;right:12px;background:white;width:220px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,0.12);border-radius:12px;}
-.nav-links.active{display:flex;}
-.menu-toggle{display:flex;align-items:center;cursor:pointer;font-size:1.9rem;color:var(--clr-primary);padding:6px 10px;border-radius:8px;}
-.contact-grid{display:flex;flex-direction:column;gap:20px;}
-.contact-info,.contact-form{width:100%;padding:12px 0;}
-.contact-form iframe{height:560px;}
+
+.hero{
+padding:130px 20px 100px;
 }
-@media(min-width:901px){.menu-toggle{display:none;}}
+
+.hero h1{
+font-size:46px;
+line-height:1.05;
+}
+
+h2.section-title{
+font-size:38px;
+}
+
+.logo img{
+height:85px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+}
+
+.contact-grid{
+display:flex;
+flex-direction:column;
+}
+
+.why-card,
+.service-card,
+.use-case,
+.about-card{
+padding:30px;
+}
+
+.contact-form iframe{
+height:560px;
+}
+
+section{
+padding:90px 0;
+}
+}
+
+@media(max-width:700px){
+.why-grid,
+.services-grid,
+.about-grid{
+grid-template-columns:1fr;
+}
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<nav class="container" aria-label="Navigation principale">
-<a href="#" class="logo" id="logo-link" title="Aller en haut" onclick="scrollToTop(event)"><img src="logo.png" alt="AI Process Lab"></a>
-<div class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-hidden="false" aria-label="Ouvrir le menu">☰</div>
-<ul class="nav-links" id="navLinks">
-<li><a href="#pourquoi" data-target="pourquoi" onclick="navToSection(event)">Pourquoi nous ?</a></li>
-<li><a href="#services" data-target="services" onclick="navToSection(event)">Services</a></li>
-<li><a href="#realisations" data-target="realisations" onclick="navToSection(event)">Réalisations</a></li>
-<li><a href="#apropos" data-target="apropos" onclick="navToSection(event)">À propos</a></li>
-<li><a href="#contact" data-target="contact" onclick="navToSection(event)">Contact</a></li>
+<nav class="container">
+<a href="#" class="logo">
+<img src="logo.png" alt="AI Process LAB">
+</a>
+
+<button class="menu-toggle" id="menu-toggle">
+<span class="material-icons">menu</span>
+</button>
+
+<ul class="nav-links" id="mobile-menu">
+<li><a href="#pourquoi">Pourquoi nous ?</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#realisations">Résultats</a></li>
+<li><a href="#apropos">Approche</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
 
-<!-- Hero -->
 <section class="hero" id="top">
+
 <div class="container">
-<h1>Simplifiez, Automatisez, Accélérez!</h1>
-<p class="tagline">Nous rendons votre business automatique et prévisible grâce au no-code et à l'IA.</p>
-<p class="description">Transformez vos process métiers répétitifs en automatisations simples et efficaces avec Make, Airtable et ChatGPT, pour vous concentrer sur ce qui compte vraiment : vos clients et votre croissance.</p>
+
+<h1>
+Fiabilisez votre cycle commercial.<br>
+Ne laissez plus vos opportunités se perdre.
+</h1>
+
+<p class="tagline">
+AI Process LAB aide les PME à structurer le traitement des leads,
+automatiser les relances et sécuriser chaque opportunité commerciale.
+</p>
+
+<p class="description">
+Beaucoup d’entreprises pensent manquer de leads alors qu’elles perdent surtout
+du chiffre d’affaires entre la demande entrante, le suivi commercial,
+les relances et la signature.
+Nous structurons et fiabilisons ces étapes critiques pour rendre votre activité plus fluide, réactive et prévisible.
+</p>
+
 <div class="audit-btn-wrapper">
-<a href="https://app.youform.com/forms/giq4ql5u" class="btn btn-primary audit-btn" onclick="openYouForm(event)">Audit gratuit de vos process</a>
+<a href="https://app.youform.com/forms/giq4ql5u"
+class="btn btn-primary">
+Analyser mon cycle commercial
+</a>
 </div>
+
 </div>
+
 </section>
 
-<!-- Pourquoi -->
 <section id="pourquoi">
+
 <div class="container">
-<h2 class="section-title">Pourquoi AI Process LAB ?</h2>
-<p class="section-subtitle">Nous transformons vos tâches répétitives en processus efficaces et mesurables.</p>
+
+<h2 class="section-title">
+Pourquoi les PME perdent du chiffre d’affaires sans le voir ?
+</h2>
+
+<p class="section-subtitle">
+Le problème vient rarement du volume de leads.
+Il vient souvent du manque de suivi, de relance et de visibilité commerciale.
+</p>
+
 <div class="why-grid">
-<div class="why-card visible"><span class="material-icons service-icon">person</span><h3>Expertise professionnelle</h3><p>Des solutions conçues pour les indépendants et TPE, avec mise en œuvre rapide et résultats mesurables.</p></div>
-<div class="why-card visible"><span class="material-icons service-icon">flash_on</span><h3>Déploiement express</h3><p>Optimisation de vos process et livraison rapide de vos automatisations pour un gain immédiat et concret.</p></div>
-<div class="why-card visible"><span class="material-icons service-icon">trending_up</span><h3>Retour sur investissement</h3><p>Nous créons des flux automatisés qui améliorent vos performances et libèrent du temps pour votre croissance.</p></div>
+
+<div class="why-card">
+<span class="material-icons service-icon">schedule</span>
+<h3>Des demandes traitées trop tard</h3>
+<p>
+Les prospects arrivent mais ne reçoivent pas de réponse suffisamment rapide.
+Quelques heures de retard peuvent suffire à perdre une opportunité.
+</p>
 </div>
-<div class="audit-btn-wrapper"><a href="https://app.youform.com/forms/giq4ql5u" class="btn btn-primary audit-btn" onclick="openYouForm(event)">Audit gratuit de vos process</a></div>
+
+<div class="why-card">
+<span class="material-icons service-icon">sync_problem</span>
+<h3>Des relances irrégulières</h3>
+<p>
+Les équipes manquent de temps, les devis restent sans suivi
+et certaines opportunités disparaissent simplement du radar.
+</p>
 </div>
+
+<div class="why-card">
+<span class="material-icons service-icon">insights</span>
+<h3>Un pipeline commercial difficile à piloter</h3>
+<p>
+Peu de visibilité sur les priorités commerciales,
+les actions à mener et les opportunités réellement génératrices de business.
+</p>
+</div>
+
+</div>
+
+<div class="audit-btn-wrapper">
+<a href="https://app.youform.com/forms/giq4ql5u"
+class="btn btn-primary">
+Faire analyser mon organisation
+</a>
+</div>
+
+</div>
+
 </section>
 
-<!-- Services -->
 <section id="services">
+
 <div class="container">
-<h2 class="section-title">Services sur-mesure</h2>
-<p class="section-subtitle">Nous créons des solutions d’automatisation adaptées à vos besoins pour simplifier votre quotidien et accélérer vos résultats.</p>
+
+<h2 class="section-title">
+Des systèmes conçus pour structurer et sécuriser votre activité commerciale
+</h2>
+
+<p class="section-subtitle">
+Nous mettons en place,en concertation avec vous, des workflows et process fiables permettant aux dirigeants
+et équipes commerciales de gagner en réactivité, en visibilité et en efficacité.
+</p>
+
 <div class="services-grid">
-<div class="service-card visible"><span class="material-icons service-icon">dashboard_customize</span><h3>CRM & suivi automatique des prospects</h3><p>Vos leads sont centralisés, relancés automatiquement, et aucun contact ne se perd.</p></div>
-<div class="service-card visible"><span class="material-icons service-icon">event_available</span><h3>Planification simplifiée, zéro rendez-vous manqué</h3><p>Vos clients prennent rendez-vous en ligne, confirmations et rappels automatiques inclus.</p></div>
-<div class="service-card visible"><span class="material-icons service-icon">attach_money</span><h3>Devis et factures automatisés</h3><p>Créez et envoyez vos devis/factures automatiquement, suivez paiements et relances en un clic.</p></div>
-<div class="service-card visible"><span class="material-icons service-icon">mail</span><h3>Boîte mail optimisée & intelligente</h3><p>Vos emails sont triés et traités automatiquement pour ne jamais perdre d'opportunité.</p></div>
-<div class="service-card visible"><span class="material-icons service-icon">groups</span><h3>Recrutement simplifié et onboarding fluide</h3><p>Suivi automatique des candidatures, relances intelligentes, intégration des nouveaux collaborateurs sans stress.</p></div>
-<div class="service-card visible"><span class="material-icons service-icon">precision_manufacturing</span><h3>Automatisation sur-mesure de vos process</h3><p>Transformez vos tâches répétitives en flux automatisés adaptés à votre activité et vos outils.</p></div>
+
+<div class="service-card">
+<span class="material-icons service-icon">hub</span>
+<h3>Centralisation des leads</h3>
+<p>
+Toutes les demandes sont regroupées dans un environnement unique
+pour éviter les pertes d’informations et améliorer le suivi.
+</p>
 </div>
-<div class="audit-btn-wrapper"><a href="https://app.youform.com/forms/giq4ql5u" class="btn btn-primary audit-btn" onclick="openYouForm(event)">Audit gratuit de vos process</a></div>
+
+<div class="service-card">
+<span class="material-icons service-icon">notifications_active</span>
+<h3>Relances automatisées</h3>
+<p>
+Les relances commerciales sont déclenchées automatiquement
+pour accélérer les réponses et réduire les opportunités oubliées.
+</p>
 </div>
+
+<div class="service-card">
+<span class="material-icons service-icon">query_stats</span>
+<h3>Suivi du pipeline commercial</h3>
+<p>
+Visualisez les opportunités actives,
+les points de blocage et les actions prioritaires.
+</p>
+</div>
+
+<div class="service-card">
+<span class="material-icons service-icon">description</span>
+<h3>Gestion des devis et suivi</h3>
+<p>
+Organisation des devis envoyés,
+des relances associées et des étapes de validation.
+</p>
+</div>
+
+<div class="service-card">
+<span class="material-icons service-icon">mail_outline</span>
+<h3>Traitement structuré des demandes</h3>
+<p>
+Les demandes entrantes sont organisées,
+attribuées et suivies de manière plus rigoureuse.
+</p>
+</div>
+
+<div class="service-card">
+<span class="material-icons service-icon">settings_suggest</span>
+<h3>Structuration des workflows</h3>
+<p>
+Chaque entreprise possède ses propres contraintes.
+Nous adaptons les flux à votre réalité opérationnelle.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- Réalisations -->
 <section id="realisations">
+
 <div class="container">
-<h2 class="section-title">Réalisations concrètes</h2>
-<p class="section-subtitle">Chaque automatisation crée un vrai changement dans votre quotidien.</p>
+
+<h2 class="section-title">
+Résultats observés après structuration du cycle commercial
+</h2>
+
+<p class="section-subtitle">
+L’objectif n’est pas uniquement d’automatiser.
+Fiabiliser le traitement de vos opportunités
+et sécuriser votre chiffre d’affaires est notre priorité.
+</p>
+
 <div class="why-grid">
-<div class="use-case visible"><span class="material-icons service-icon">rocket_launch</span><h3>CRM complet - Centralisation totale</h3><p>Gestion des leads, prise de rdvs automatique, devis/factures et relances automatisées.</p><div class="result-box">✅ +10h/semaine gagnées, +35% de ventes en moyenne</div></div>
-<div class="use-case visible"><span class="material-icons service-icon">badge</span><h3>Recrutement automatisé</h3><p>Suivi des candidats, relances automatiques et intégration des nouveaux collaborateurs.</p><div class="result-box">✅ +8h/semaine gagnées, optimisation du recrutement garantie</div></div>
-<div class="use-case visible"><span class="material-icons service-icon">auto_awesome</span><h3>Publication automatisée pour créateurs de contenu</h3><p>Publication multi-canal automatique avec ChatGPT pour gagner du temps et rester régulier.</p><div class="result-box">✅ +6h gagnées par semaine</div></div>
+
+<div class="use-case">
+<span class="material-icons service-icon">trending_up</span>
+
+<h3>Réduction du temps de réponse commercial</h3>
+
+<p>
+Les leads entrants sont traités plus rapidement,
+ce qui améliore fortement la prise de contact et la conversion.
+</p>
+
+<div class="result-box">
+✅ Jusqu’à +40% de conversion lead → rendez-vous
 </div>
-<div class="audit-btn-wrapper"><a href="https://app.youform.com/forms/giq4ql5u" class="btn btn-primary audit-btn" onclick="openYouForm(event)">Audit gratuit de vos process</a></div>
+
 </div>
+
+<div class="use-case">
+
+<span class="material-icons service-icon">shield</span>
+
+<h3>Moins d’opportunités oubliées</h3>
+
+<p>
+Chaque demande est suivie,
+relancée et visible dans le pipeline commercial.
+</p>
+
+<div class="result-box">
+✅ Forte réduction des leads non traités ou oubliés
+</div>
+
+</div>
+
+<div class="use-case">
+
+<span class="material-icons service-icon">payments</span>
+
+<h3>Une activité commerciale plus prévisible</h3>
+
+<p>
+Les dirigeants disposent enfin d’une vision claire
+sur l’avancement des opportunités et les priorités.
+</p>
+
+<div class="result-box">
+✅ Meilleure visibilité du cycle commercial complet
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- À propos -->
 <section id="apropos">
+
 <div class="container">
-<h2 class="section-title">Qui sommes-nous ?</h2>
-<p class="section-subtitle">Une équipe d’experts qui aide les indépendants et TPE à automatiser leurs process et développer leur activité efficacement.</p>
+
+<h2 class="section-title">
+Une approche orientée terrain et résultats
+</h2>
+
+<p class="section-subtitle">
+AI Process LAB est né d’un constat simple :
+beaucoup de PME disposent d’opportunités commerciales,
+mais perdent du chiffre d’affaires dans l’organisation quotidienne.
+</p>
+
 <div class="about-grid">
-<div class="about-card visible"><span class="material-icons service-icon">psychology</span><h3>Notre mission</h3><p>Démocratiser l’automatisation pour permettre à chaque indépendant et TPE de se concentrer sur l’essentiel : ses clients.</p></div>
-<div class="about-card visible"><span class="material-icons service-icon">hub</span><h3>Notre approche</h3><p>Écoute, analyse, prototype, automatisation : tout est documenté, mesurable et adapté à vos outils actuels.</p></div>
-<div class="about-card visible"><span class="material-icons service-icon">verified_user</span><h3>Nos valeurs</h3><p>Transparence, réactivité, confidentialité : chaque mission vise un retour sur investissement clair pour nos clients.</p></div>
+
+<div class="about-card">
+
+<span class="material-icons service-icon">engineering</span>
+
+<h3>Une double culture technique et opérationnelle</h3>
+
+<p>
+Après un parcours en informatique et plus de 25 ans
+d'expérience dans la coordination opérationnelle et le pilotage commercial,
+AI Process LAB a été créé pour connecter organisation terrain
+et structuration digitale.
+</p>
+
 </div>
-<div class="audit-btn-wrapper"><a href="https://app.youform.com/forms/giq4ql5u" class="btn btn-primary audit-btn" onclick="openYouForm(event)">Audit gratuit de vos process</a></div>
+
+<div class="about-card">
+
+<span class="material-icons service-icon">business_center</span>
+
+<h3>Une vision centrée business</h3>
+
+<p>
+La technologie n’est pas une fin en soi. Elle ne sert qu’un objectif : améliorer la gestion des opportunités commerciales et augmenter le chiffre d’affaires de nos clients.</p>
+
 </div>
+
+<div class="about-card">
+
+<span class="material-icons service-icon">verified</span>
+
+<h3>Des systèmes pensés pour durer</h3>
+
+<p>
+Les workflows mis en place sont conçus
+pour être fiables, lisibles et adaptés
+au fonctionnement réel des PME.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- Contact -->
 <section id="contact">
+
 <div class="container">
-<h2 class="section-title">Échangeons ensemble</h2>
-<p class="section-subtitle">Parlons de vos besoins et découvrez comment automatiser vos process métiers.</p>
+
+<h2 class="section-title">
+Analysons votre organisation commerciale
+</h2>
+
+<p class="section-subtitle">
+Échangeons sur vos process actuels,
+vos pertes de leads potentielles
+et les axes d’amélioration possibles.
+</p>
+
 <div class="contact-grid">
+
 <div class="contact-info">
-<h3>Nos coordonnées</h3>
-<p><span class="material-icons contact-icon">email</span><a href="mailto:yb@ai-process-lab.com">yb@ai-process-lab.com</a></p>
-<p><span class="material-icons contact-icon">phone_iphone</span><a href="tel:+33769847221">07 69 84 72 21</a></p>
-<p><span class="material-icons contact-icon">location_on</span>1 rue Marguerin, 75014 Paris</p>
+
+<h3>
+Parlons de vos enjeux commerciaux
+</h3>
+
+<p>
+<span class="material-icons contact-icon">email</span>
+<a href="mailto:yb@ai-process-lab.com">
+yb@ai-process-lab.com
+</a>
+</p>
+
+<p>
+<span class="material-icons contact-icon">phone_iphone</span>
+<a href="tel:+33769847221">
+07 69 84 72 21
+</a>
+</p>
+
+<p>
+<span class="material-icons contact-icon">location_on</span>
+1 rue Marguerin 75014 Paris 
+</p>
+
 </div>
-<div class="contact-form"><iframe src="https://app.youform.com/forms/giq4ql5u" title="Formulaire AI Process Lab"></iframe></div>
+
+<div class="contact-form">
+<iframe
+src="https://app.youform.com/forms/giq4ql5u"
+title="Formulaire AI Process LAB">
+</iframe>
 </div>
+
 </div>
+
+</div>
+
 </section>
 
-<!-- Footer -->
 <footer>
-© 2026 AI Process LAB — Simplifiez, Automatisez, Accélérez!  
-<a href="#" onclick="openModal('legal')">Mentions légales</a> | <a href="#" onclick="openModal('privacy')">Politique de confidentialité</a>
+© 2026 AI Process LAB — Fiabilisation du cycle commercial des PME
 </footer>
 
-<!-- Modals -->
-<div id="legal" class="modal">
-<div class="modal-content">
-<span class="modal-close" onclick="closeModal('legal')">&times;</span>
-<h3>Mentions légales</h3>
-<p><strong>Nom de l'entreprise :</strong> AI Process LAB</p>
-<p><strong>SIRET :</strong> 99362812200018</p>
-<p><strong>Adresse :</strong> 1 rue Marguerin, 75014 Paris - France</p>
-<p><strong>Email :</strong> <a href="mailto:yb@ai-process-lab.com">yb@ai-process-lab.com</a></p>
-<p><strong>Hébergement :</strong> Vercel, <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">https://vercel.com</a></p>
-<p>Ce site a pour objet de présenter les services AI Process LAB et d’offrir un audit gratuit de vos process après saisie du formulaire de contact et visio de présentation. Toute reproduction totale ou partielle du contenu est interdite sans autorisation préalable.</p>
-</div>
-</div>
-
-<div id="privacy" class="modal">
-<div class="modal-content">
-<span class="modal-close" onclick="closeModal('privacy')">&times;</span>
-<h3>Politique de confidentialité</h3>
-<p>Nous collectons uniquement les informations que vous fournissez volontairement via notre formulaire de contact (nom, prénom, email, téléphone, société, message).</p>
-<p>Ces données sont utilisées uniquement pour répondre à vos demandes et ne sont pas partagées avec des tiers.</p>
-<p>Durée de conservation : les données sont conservées tant que nécessaire pour la finalité de traitement.</p>
-<p>Vous disposez d’un droit d’accès, de rectification et de suppression de vos données en nous contactant par email à <a href="mailto:yb@ai-process-lab.com">yb@ai-process-lab.com</a>.</p>
-<p>En utilisant notre site, vous acceptez notre politique de confidentialité.</p>
-</div>
-</div>
-
 <script>
-// Formulaire dans nouvelle fenêtre, compatible iPhone
-function openYouForm(e){
-  e.preventDefault();
-  window.open('https://app.youform.com/forms/giq4ql5u','_blank','noopener,noreferrer');
-}
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-// Menu toggle + scroll helpers, compatible iPhone
-let menuAutoCloseTimer = null;
-function toggleMenu(){
-  const nav = document.getElementById('navLinks');
-  nav.classList.toggle('active');
-}
+menuToggle.addEventListener('click', () => {
+mobileMenu.classList.toggle('mobile-menu-active');
+});
 
-function navToSection(e){
-  e.preventDefault();
-  const target = document.getElementById(e.currentTarget.dataset.target);
-  const nav = document.getElementById('navLinks');
-  if(target){
-    const offset = target.offsetTop - 110;
-    window.scrollTo({top:offset, behavior:'smooth'});
-  }
-  if(nav.classList.contains('active')){nav.classList.remove('active');}
-}
-
-function scrollToTop(e){
-  e.preventDefault();
-  const nav = document.getElementById('navLinks');
-  window.scrollTo({top:0, behavior:'smooth'});
-  if(nav.classList.contains('active')){nav.classList.remove('active');}
-}
-
-// Modals
-function openModal(id){
-  document.getElementById(id).style.display = 'flex';
-}
-function closeModal(id){
-  document.getElementById(id).style.display = 'none';
-}
-// Fermer modal au clic à l’extérieur
-window.onclick = function(event){
-  ['legal','privacy'].forEach(function(id){
-    const modal = document.getElementById(id);
-    if(event.target == modal){ modal.style.display='none'; }
-  });
-}
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.addEventListener('click', () => {
+mobileMenu.classList.remove('mobile-menu-active');
+});
+});
 </script>
 
 </body>
 </html>
-
-
-
