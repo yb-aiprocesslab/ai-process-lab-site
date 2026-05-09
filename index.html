@@ -901,9 +901,166 @@ title="Formulaire AI Process LAB">
 
 <footer>
 © 2026 AI Process LAB — Fiabilisation du cycle commercial des PME
+
+<div style="margin-top:12px;">
+<a href="#" onclick="openModal('legal'); return false;">Mentions légales</a>
+|
+<a href="#" onclick="openModal('privacy'); return false;">Politique de confidentialité</a>
+</div>
 </footer>
 
+<!-- MODAL MENTIONS LEGALES -->
+
+<div id="legal" class="modal">
+<div class="modal-content">
+
+<span class="modal-close" onclick="closeModal('legal')">&times;</span>
+
+<h3>Mentions légales</h3>
+
+<p>
+<strong>Éditeur du site :</strong><br>
+AI Process LAB
+</p>
+
+<p>
+<strong>SIRET :</strong><br>
+99362812200018
+</p>
+
+<p>
+<strong>Adresse :</strong><br>
+1 rue Marguerin, 75014 Paris, France
+</p>
+
+<p>
+<strong>Email :</strong><br>
+<a href="mailto:yb@ai-process-lab.com">
+yb@ai-process-lab.com
+</a>
+</p>
+
+<p>
+<strong>Téléphone :</strong><br>
+<a href="tel:+33769847221">
+07 69 84 72 21
+</a>
+</p>
+
+<p>
+<strong>Nom de domaine :</strong><br>
+www.ai-process-lab.com
+</p>
+
+<p>
+<strong>Hébergement :</strong><br>
+GitHub Pages — GitHub, Inc.<br>
+88 Colin P Kelly Jr St,<br>
+San Francisco, CA 94107,<br>
+United States
+</p>
+
+<p>
+Ce site a pour objet de présenter les services proposés par AI Process LAB
+dans le domaine de la structuration commerciale, de l’organisation des process
+et de la fiabilisation du cycle commercial des PME.
+</p>
+
+<p>
+L’ensemble des contenus présents sur ce site
+(textes, éléments graphiques, logo, structure, design)
+sont protégés par le droit de la propriété intellectuelle.
+Toute reproduction, représentation ou diffusion,
+totale ou partielle, sans autorisation préalable,
+est interdite.
+</p>
+
+</div>
+</div>
+
+<!-- MODAL POLITIQUE CONFIDENTIALITE -->
+
+<div id="privacy" class="modal">
+<div class="modal-content">
+
+<span class="modal-close" onclick="closeModal('privacy')">&times;</span>
+
+<h3>Politique de confidentialité</h3>
+
+<p>
+AI Process LAB attache une importance particulière
+à la protection des données personnelles.
+</p>
+
+<p>
+Les informations éventuellement collectées via le formulaire de contact (nom, prénom, email, téléphone, informations communiquées volontairement)
+sont utilisées uniquement dans le cadre
+des échanges commerciaux et du traitement des demandes.
+</p>
+
+<p>
+Les données ne sont ni vendues,
+ni cédées,
+ni transmises à des tiers à des fins commerciales.
+</p>
+
+<p>
+Le formulaire de contact présent sur ce site est opéré via la plateforme YouForm.
+</p>
+
+<p>
+Pour plus d’informations concernant le traitement des données par YouForm,
+vous pouvez consulter leur politique de confidentialité :
+</p>
+
+<p>
+<a href="https://youform.com/privacy"
+target="_blank"
+rel="noopener noreferrer">
+https://youform.com/privacy
+</a>
+</p>
+
+<p>
+Les données sont conservées uniquement pendant la durée nécessaire
+au traitement des échanges et des demandes commerciales.
+</p>
+
+<p>
+Conformément au Règlement Général sur la Protection des Données (RGPD),
+vous disposez :
+</p>
+
+<p>
+• d’un droit d’accès<br>
+• d’un droit de rectification<br>
+• d’un droit de suppression<br>
+• d’un droit d’opposition au traitement de vos données
+</p>
+
+<p>
+Pour toute demande relative à vos données personnelles,
+vous pouvez contacter la personne responsable par mail :
+</p>
+
+<p>
+<a href="mailto:yb@ai-process-lab.com">
+yb@ai-process-lab.com
+</a>
+</p>
+
+<p>
+Ce site ne vend pas de données personnelles
+et n’utilise pas de système publicitaire tiers.
+</p>
+
+</div>
+</div>
+
+<!-- AJOUTE CE SCRIPT JUSTE AVANT </body> -->
+
 <script>
+
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -916,7 +1073,34 @@ link.addEventListener('click', () => {
 mobileMenu.classList.remove('mobile-menu-active');
 });
 });
-</script>
 
+/* MODALS */
+
+function openModal(id){
+document.getElementById(id).style.display = 'flex';
+document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id){
+document.getElementById(id).style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+
+window.addEventListener('click', function(e){
+
+const legalModal = document.getElementById('legal');
+const privacyModal = document.getElementById('privacy');
+
+if(e.target === legalModal){
+closeModal('legal');
+}
+
+if(e.target === privacyModal){
+closeModal('privacy');
+}
+
+});
+
+</script>
 </body>
 </html>
