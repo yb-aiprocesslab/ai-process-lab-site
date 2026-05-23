@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline commercial Airtable : suivi automatisé pour TPE et PME | AI Process Lab</title>
+<meta name="description" content="Même avec un CRM, sans automatisation le suivi commercial reste aléatoire. Découvrez comment un pipeline Airtable connecté à Make change la donne pour les TPE et PME.">
+<meta name="keywords" content="pipeline commercial Airtable, suivi commercial automatisé TPE PME, CRM sans automatisation limites, Airtable Make pipeline, suivi prospects automatique, gestion commerciale PME">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ai-process-lab.com/blog/pipeline-commercial-airtable-tpe.html">
+<meta property="og:title" content="Pipeline commercial sur Airtable : l'alternative simple aux CRM coûteux">
+<meta property="og:description" content="Structurez votre suivi prospects avec Airtable sans payer Salesforce ou HubSpot. Guide pratique pour TPE et PME.">
+<meta property="og:url" content="https://www.ai-process-lab.com/blog/pipeline-commercial-airtable-tpe.html">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Pipeline commercial sur Airtable : l'alternative simple aux CRM coûteux","description":"Comment structurer son suivi prospects avec Airtable pour les TPE et PME.","author":{"@type":"Person","name":"Yacine B."},"publisher":{"@type":"Organization","name":"AI Process Lab","url":"https://www.ai-process-lab.com"},"datePublished":"2026-05-10","dateModified":"2026-05-23","keywords":"pipeline commercial Airtable, CRM TPE PME, suivi prospects, alternative Salesforce"}
+</script>
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #0D2B4E; --blue: #2D6BE4; --blue-hover: #1a57d4; --blue-light: #E8F0FD; --bg: #F8F9FB; --bg-alt: #F1F4F8; --white: #FFFFFF; --text: #1A2B3C; --text-muted: #6B7A8D; --border: #E2E8F0; --shadow: 0 1px 3px rgba(13,43,78,0.06), 0 4px 16px rgba(13,43,78,0.08); --radius: 12px; --transition: 0.2s ease; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+h1,h2,h3,h4 { font-family: 'Sora', sans-serif; color: var(--navy); line-height: 1.25; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(248,249,251,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); height: 68px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.nav-logo-img { height: 34px; }
+.nav-logo-fallback { width: 32px; height: 32px; background: var(--navy); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 12px; color: white; }
+.nav-logo-text { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+.nav-links a:hover { color: var(--navy); }
+.nav-cta { background: var(--blue) !important; color: white !important; padding: 9px 18px; border-radius: 8px; font-weight: 500 !important; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
+.article-wrapper { max-width: 740px; margin: 0 auto; padding: 110px 5% 80px; }
+.article-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
+.article-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.article-breadcrumb a:hover { color: var(--blue); }
+.article-breadcrumb span { color: var(--border); }
+.article-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-light); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+.article-title { font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
+.article-meta-bar { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 40px; flex-wrap: wrap; }
+.article-meta-bar strong { color: var(--navy); }
+.article-content { font-size: 16px; line-height: 1.85; color: var(--text); }
+.article-content p { margin-bottom: 20px; }
+.article-content h2 { font-size: clamp(20px, 2.5vw, 26px); font-weight: 700; color: var(--navy); margin: 44px 0 16px; }
+.article-content h3 { font-size: 18px; font-weight: 600; color: var(--navy); margin: 28px 0 12px; }
+.article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 20px; }
+.article-content li { margin-bottom: 8px; }
+.article-content strong { color: var(--navy); font-weight: 600; }
+.callout { background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; margin: 28px 0; font-size: 15px; color: var(--navy); }
+.callout strong { color: var(--blue); display: block; margin-bottom: 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+.compare-mini { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 14px; }
+.compare-mini th { padding: 14px 18px; background: var(--navy); color: white; font-family: 'Sora', sans-serif; font-weight: 600; text-align: left; font-size: 13px; }
+.compare-mini td { padding: 13px 18px; border-top: 1px solid var(--border); }
+.compare-mini tr:nth-child(even) td { background: var(--bg-alt); }
+.compare-mini td:first-child { font-weight: 500; color: var(--navy); background: var(--bg); }
+.check { color: #059669; font-weight: 700; }
+.cross { color: #DC2626; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+.field-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.field-name { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+.field-type { font-size: 11px; color: var(--blue); font-weight: 500; }
+.field-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.related-articles { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-top: 48px; }
+.related-articles h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px; }
+.related-link { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); transition: color var(--transition); }
+.related-link:last-child { border-bottom: none; padding-bottom: 0; }
+.related-link:hover { color: var(--blue); text-decoration: none; }
+.related-link-arrow { color: var(--blue); font-size: 18px; flex-shrink: 0; }
+.related-link-text { font-size: 14px; font-weight: 500; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 14px; text-decoration: none; margin-top: 40px; transition: color var(--transition); }
+.back-link:hover { color: var(--blue); text-decoration: none; }
+.article-cta { background: var(--navy); border-radius: 16px; padding: 36px 40px; margin: 48px 0 0; text-align: center; }
+.article-cta h3 { font-size: 22px; color: white; margin-bottom: 10px; }
+.article-cta p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+.article-cta a { display: inline-block; background: var(--blue); color: white; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all var(--transition); box-shadow: 0 4px 14px rgba(45,107,228,0.3); }
+.article-cta a:hover { background: var(--blue-hover); transform: translateY(-2px); }
+footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-logo-img { height: 28px; filter: brightness(0) invert(1); opacity: 0.7; }
+.footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+@media (max-width: 900px) { .nav-links { display: none; } .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--white); padding: 32px 5%; gap: 24px; align-items: flex-start; border-top: 1px solid var(--border); z-index: 999; } .nav-links.open a { font-size: 18px; color: var(--navy); } .nav-toggle { display: flex; } .field-grid { grid-template-columns: 1fr; } }
+@media (max-width: 500px) { .article-cta { padding: 28px 24px; } .footer-inner { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo.png" alt="AI Process Lab" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">AI</div>
+    <span class="nav-logo-text">AI Process Lab</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html#solution">Services</a></li>
+    <li><a href="../index.html#tarifs">Offres</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="https://app.youform.com/forms/giq4ql5u" class="nav-cta">Diagnostic gratuit</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="article-wrapper">
+  <div class="article-breadcrumb">
+    <a href="../index.html">Accueil</a><span>/</span>
+    <a href="../blog.html">Blog</a><span>/</span>
+    Pipeline commercial Airtable
+  </div>
+
+  <div class="article-tag">Airtable · Pipeline commercial · TPE et PME</div>
+  <h1 class="article-title">Excel, CRM sans automatisation : dans les deux cas, votre suivi commercial reste aléatoire.</h1>
+  <div class="article-meta-bar">
+    <span>Par <strong>Yacine B.</strong></span>
+    <span>10 min de lecture</span>
+    <span>Airtable · Suivi commercial · TPE et PME</span>
+  </div>
+
+  <div class="article-content">
+
+    <p>Un fichier Excel, quelques colonnes, Nom, Société, Date de contact, Statut, et vous suivez vos prospects du mieux que vous pouvez. Ça marche quand vous avez 5 dossiers en cours. Quand vous en avez 20, les informations deviennent vite obsolètes, les relances se perdent, et personne ne sait vraiment où en est chaque opportunité.</p>
+
+    <p>Le problème n'est pas Excel. C'est qu'un fichier passif ne peut pas prendre d'initiative : il ne relance pas, il n'envoie pas de mail, il n'alerte pas quand un devis est resté sans réponse depuis 10 jours. C'est vous qui devez faire tout ça manuellement, à chaque fois.</p>
+
+    <p>Airtable change cette équation. Ce n'est pas un simple tableur amélioré, c'est une base de données relationnelle qui, connectée à Make, devient un vrai moteur commercial automatisé.</p>
+
+    <h2>CRM classique, Excel, Airtable : ce qui les différencie vraiment</h2>
+
+    <p>Salesforce, HubSpot, Pipedrive sont des outils puissants, conçus pour des équipes commerciales de 10 personnes ou plus avec des processus complexes. Pour une TPE ou une PME de 5 à 20 personnes, ils représentent souvent un investissement disproportionné en argent, en temps de configuration, et en courbe d'apprentissage.</p>
+
+    <table class="compare-mini">
+      <thead><tr><th>Critère</th><th>Excel / Google Sheets</th><th>CRM classique</th><th>Airtable sur mesure</th></tr></thead>
+      <tbody>
+        <tr><td>Coût mensuel</td><td>Gratuit</td><td>50 à 150 € / mois/ utilisateur</td><td class="check">Moins de 20 € / équipe</td></tr>
+        <tr><td>Délai de configuration</td><td>Immédiat</td><td>Plusieurs semaines</td><td class="check">2 à 5 jours</td></tr>
+        <tr><td>Relances automatiques</td><td class="cross">Non</td><td>Partiel selon offre</td><td class="check">Oui via Make</td></tr>
+        <tr><td>Adapté à vos process</td><td class="cross">Limité</td><td class="cross">Vous vous adaptez à l'outil</td><td class="check">L'outil s'adapte à vous</td></tr>
+        <tr><td>Données vous appartiennent</td><td>Oui</td><td class="cross">Non (chez l'éditeur)</td><td class="check">Oui</td></tr>
+        <tr><td>Connexion Make</td><td>Partielle</td><td>Partielle ou payante</td><td class="check">Native et complète</td></tr>
+      </tbody>
+    </table>
+
+    <h2>La structure d'un pipeline commercial Airtable efficace</h2>
+
+    <p>Un pipeline commercial sur Airtable repose sur des tables relationnelles, des feuilles liées entre elles, plutôt qu'une centralisation dans un ou plusieurs onglets. C'est ce qui permet d'avoir une vue complète sur chaque client, de la première demande à la dernière facture.</p>
+
+    <h3>Les 4 tables essentielles</h3>
+
+    <ul>
+      <li><strong>Clients</strong>, les sociétés et contacts avec qui vous travaillez ou prospectez</li>
+      <li><strong>Demandes</strong>, chaque prise de contact entrante, reliée à un client</li>
+      <li><strong>Devis</strong>, chaque proposition commerciale, avec statut et montant</li>
+      <li><strong>Factures</strong>, chaque facture émise, reliée au devis validé</li>
+    </ul>
+
+    <p>Cette structure vous permet de remonter l'historique complet d'un client en un clic : toutes ses demandes, tous ses devis, toutes ses factures. Aucun CRM à 100€/mois/utilisateur ne fait mieux pour votre besoin.</p>
+
+    <h3>Les champs clés dans la table Demandes</h3>
+
+    <div class="field-grid">
+      <div class="field-card"><div class="field-name">Statut</div><div class="field-type">Sélection unique</div><div class="field-desc">Lead / RDV planifié / Offre en cours / Gagné / Perdu</div></div>
+      <div class="field-card"><div class="field-name">Date de la demande</div><div class="field-type">Date</div><div class="field-desc">Calculer le temps de traitement moyen</div></div>
+      <div class="field-card"><div class="field-name">Source</div><div class="field-type">Sélection unique</div><div class="field-desc">Site web / Recommandation / Prospection</div></div>
+      <div class="field-card"><div class="field-name">Score IA</div><div class="field-type">Texte</div><div class="field-desc">Chaud / Neutre / Froid, attribué automatiquement</div></div>
+      <div class="field-card"><div class="field-name">Prochain RDV</div><div class="field-type">Date</div><div class="field-desc">Synchronisé depuis Cal.com via Make</div></div>
+      <div class="field-card"><div class="field-name">Commercial assigné</div><div class="field-type">Sélection</div><div class="field-desc">Si vous avez plusieurs commerciaux</div></div>
+    </div>
+
+    <h2>Les vues qui changent tout</h2>
+
+    <p>Airtable permet de créer plusieurs vues sur les mêmes données. Chaque membre de l'équipe voit ce dont il a besoin, sans modifier les données des autres.</p>
+
+    <h3>La vue Kanban, votre pipeline en un coup d'œil</h3>
+    <p>Une colonne par statut, une carte par prospect. Vous voyez immédiatement combien d'opportunités sont à chaque étape du cycle. Déplacer une carte change le statut, Make déclenche l'action correspondante automatiquement.</p>
+
+    <h3>La vue "À traiter aujourd'hui"</h3>
+    <p>Un filtre sur les demandes dont le prochain RDV est aujourd'hui ou en retard, plus les devis envoyés depuis plus de 3 jours sans réponse. C'est votre liste de priorités du matin, générée automatiquement.</p>
+
+    <h3>La vue Reporting mensuel</h3>
+    <p>Regroupement par mois : nombre de leads, taux de conversion, chiffre d'affaires généré. Vous pilotez votre activité commerciale avec des chiffres réels, pas des impressions.</p>
+
+    <div class="callout">
+      <strong>L'avantage clé</strong>
+      Quand Airtable est connecté à Make, chaque changement de statut peut déclencher une action : envoi d'un mail, génération d'un devis, création d'une facture. C'est là que la base de données devient un vrai système commercial automatisé.
+    </div>
+
+
+
+  </div>
+
+  <div class="related-articles">
+    <h3>Articles qui pourraient vous intéresser</h3>
+    <a href="automatiser-relances-commerciales-make.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Votre devis envoyé il y a 15 jours n'a pas eu de réponse. Et maintenant ?</span>
+    </a>
+    <a href="cout-assistant-commercial-vs-automatisation.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Avant de recruter un assistant commercial ou ADV, lisez ça.</span>
+    </a>
+  </div>
+
+  <a href="../blog.html" class="back-link">← Retour au blog</a>
+
+  <div class="article-cta">
+    <h3>Vous voulez structurer votre pipeline commercial ?</h3>
+    <p>30 minutes pour analyser votre situation et définir la structure adaptée à votre activité.</p>
+    <a href="https://app.youform.com/forms/giq4ql5u">Réserver mon diagnostic gratuit →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../index.html" class="footer-logo">
+      <img src="../logo.png" alt="AI Process Lab" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text" style="display:none">AI Process Lab</span>
+    </a>
+    <div class="footer-links">
+      <a href="../index.html">Accueil</a>
+      <a href="../blog.html">Blog</a>
+      <a href="mailto:yb@ai-process-lab.com">Contact</a>
+    </div>
+    <span class="footer-copy">© 2026 AI Process Lab</span>
+  </div>
+</footer>
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+navToggle.addEventListener('click', function() {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen.toString());
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+</script>
+</body>
+</html>
