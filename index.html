@@ -2,1095 +2,1659 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AI Process LAB — Structurez vos ventes. Sécurisez votre croissance.</title>
-
-<meta name="description" content="AI Process LAB aide les PME à structurer leur cycle commercial, fiabiliser le suivi des leads et sécuriser leur croissance grâce à des systèmes commerciaux plus performants.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>AI Process Lab, Suivi commercial automatisé pour TPE et PME | FR BE CH CA</title>
+<meta name="description" content="AI Process Lab automatise votre cycle commercial de A à Z : leads, relances, devis, facturation. Économisez 20h par mois. Diagnostic gratuit en 30 minutes.">
+<meta name="keywords" content="automatisation cycle commercial, CRM TPE PME, pipeline commercial automatisé, relances automatiques, facturation automatique, consultant automatisation France Belgique Suisse">
+<meta name="author" content="Yacine B., AI Process Lab">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://www.ai-process-lab.com/">
-<meta name="robots" content="index,follow">
 
-<meta property="og:title" content="AI Process LAB — Structurez vos ventes. Sécurisez votre croissance">
-<meta property="og:description" content="Structuration commerciale, suivi des leads et automatisation des relances pour PME.">
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.ai-process-lab.com/">
+<meta property="og:title" content="AI Process Lab, Automatisez votre cycle commercial">
+<meta property="og:description" content="Je structure et automatise votre cycle commercial de A à Z : leads, relances, devis, facturation. Économisez 20h par mois.">
 <meta property="og:image" content="https://www.ai-process-lab.com/og-image.png">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="AI Process Lab">
 
-<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-<link rel="shortcut icon" href="logo.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Process Lab, Automatisez votre cycle commercial">
+<meta name="twitter:description" content="Je structure et automatise votre cycle commercial de A à Z : leads, relances, devis, facturation.">
+<meta name="twitter:image" content="https://www.ai-process-lab.com/og-image.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Favicon, remplacer par le chemin réel -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI Process Lab",
+  "description": "Automatisation du cycle commercial pour TPE et PME : leads, relances, devis, facturation.",
+  "url": "https://www.ai-process-lab.com",
+  "telephone": "+33769847221",
+  "email": "yb@ai-process-lab.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1 rue Marguerin",
+    "addressLocality": "Paris",
+    "postalCode": "75014",
+    "addressCountry": "FR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Yacine B."
+  },
+  "areaServed": ["FR", "BE", "CH"],
+  "serviceType": "Automatisation commerciale"
+}
+</script>
 
 <style>
+:root {
+  --navy: #0D2B4E;
+  --blue: #2D6BE4;
+  --blue-hover: #1a57d4;
+  --blue-light: #E8F0FD;
+  --blue-mid: #4A84F0;
+  --bg: #F8F9FB;
+  --bg-alt: #F1F4F8;
+  --white: #FFFFFF;
+  --text: #1A2B3C;
+  --text-muted: #6B7A8D;
+  --border: #E2E8F0;
+  --shadow-sm: 0 1px 3px rgba(13,43,78,0.06), 0 2px 8px rgba(13,43,78,0.06);
+  --shadow: 0 1px 3px rgba(13,43,78,0.06), 0 4px 16px rgba(13,43,78,0.08);
+  --shadow-lg: 0 8px 32px rgba(13,43,78,0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+h1, h2, h3, h4 {
+  font-family: 'Sora', sans-serif;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+/* ========== NAV ========== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(248,249,251,0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  height: 68px;
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+
+.nav-logo-img { height: 36px; width: auto; object-fit: contain; }
+
+.nav-logo-fallback {
+  width: 34px; height: 34px;
+  background: var(--navy); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700; font-size: 13px; color: white;
+}
+
+.nav-logo-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--navy); letter-spacing: 0.3px;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px; font-weight: 400;
+  color: var(--text-muted); text-decoration: none;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.nav-links a:hover { color: var(--navy); }
+
+.nav-cta {
+  background: var(--blue) !important;
+  color: white !important;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 500 !important;
+  transition: background var(--transition), transform var(--transition) !important;
+}
+
+.nav-cta:hover { background: var(--blue-hover) !important; transform: translateY(-1px); }
+
+/* Mobile menu toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 4px;
+  background: none; border: none;
+}
+
+.nav-toggle span {
+  display: block; width: 22px; height: 2px;
+  background: var(--navy); border-radius: 2px;
+  transition: all var(--transition);
+}
+
+/* ========== LAYOUT ========== */
+section { padding: 88px 5%; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--blue-light); color: var(--blue);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 700; color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: var(--text-muted);
+  max-width: 580px;
+  line-height: 1.75;
+  margin-bottom: 44px;
+}
+
+/* ========== BUTTONS ========== */
+.btn-primary {
+  background: var(--blue); color: white;
+  padding: 14px 26px; border-radius: 10px;
+  font-size: 15px; font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+  display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 14px rgba(45,107,228,0.3);
+  white-space: nowrap;
+}
+
+.btn-primary:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(45,107,228,0.4); }
+
+.btn-secondary {
+  color: var(--navy); font-size: 15px; font-weight: 500;
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap var(--transition);
+  white-space: nowrap;
+}
+
+.btn-secondary:hover { gap: 10px; }
+
+/* ========== HERO ========== */
+#hero {
+  padding-top: 140px; padding-bottom: 96px;
+  background: var(--white); position: relative; overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(45,107,228,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 56px; align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue-light);
+  border: 1px solid rgba(45,107,228,0.2);
+  color: var(--blue); font-size: 13px; font-weight: 500;
+  padding: 6px 14px; border-radius: 20px;
+  margin-bottom: 22px;
+}
+
+.hero-badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--blue); animation: pulse 2s infinite;
+}
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+.hero-title {
+  font-size: clamp(28px, 4vw, 50px);
+  font-weight: 700; color: var(--navy);
+  line-height: 1.15; margin-bottom: 18px;
+}
+
+.hero-title span { color: var(--blue); }
+
+.hero-subtitle {
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: var(--text-muted);
+  line-height: 1.75; margin-bottom: 32px;
+  max-width: 480px;
+}
+
+.hero-ctas {
+  display: flex; align-items: center; gap: 16px;
+  flex-wrap: wrap; margin-bottom: 36px;
+}
+
+.hero-stats {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.hero-stat { display: flex; flex-direction: column; gap: 2px; }
+
+.hero-stat-value {
+  font-family: 'Sora', sans-serif;
+  font-size: 20px; font-weight: 700; color: var(--navy);
+}
+
+.hero-stat-label { font-size: 12px; color: var(--text-muted); }
+
+/* Pipeline visual */
+.hero-visual {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-visual-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 18px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-visual-dots { display: flex; gap: 5px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot-red { background: #FF5F57; }
+.dot-yellow { background: #FEBC2E; }
+.dot-green { background: #28C840; }
+.hero-visual-title { font-size: 12px; font-weight: 500; color: var(--text-muted); }
+
+.pipeline-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 10px; border-radius: 8px;
+  margin-bottom: 4px; transition: background var(--transition);
+}
+
+.pipeline-row:hover { background: var(--bg-alt); }
+
+.pipeline-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; color: white; flex-shrink: 0;
+}
+
+.pipeline-info { flex: 1; min-width: 0; }
+.pipeline-name { font-size: 12px; font-weight: 500; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pipeline-company { font-size: 10px; color: var(--text-muted); }
+
+.pipeline-status {
+  font-size: 10px; font-weight: 600; padding: 3px 7px; border-radius: 10px;
+  white-space: nowrap; flex-shrink: 0;
+}
+
+.status-lead { background: #EEF2FF; color: #4F46E5; }
+.status-rdv { background: #ECFDF5; color: #059669; }
+.status-devis { background: #FFF7ED; color: #D97706; }
+.status-gagne { background: #ECFDF5; color: #059669; }
+.status-relance { background: #FEF2F2; color: #DC2626; }
+
+.hero-visual-footer {
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+
+.auto-badge {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: #059669; font-weight: 500;
+}
+
+.auto-dot { width: 6px; height: 6px; border-radius: 50%; background: #059669; animation: pulse 2s infinite; }
+
+/* ========== PROBLÈME ========== */
+#probleme { background: var(--bg-alt); }
+
+.problems-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.problem-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.problem-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+
+.problem-icon {
+  width: 44px; height: 44px;
+  background: #FEF2F2; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 14px;
+}
+
+.problem-title { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.problem-text { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* ========== CAS CLIENT ========== */
+#cas-client { background: var(--navy); }
+
+#cas-client .section-tag { background: rgba(45,107,228,0.2); color: #7EB3FF; }
+#cas-client .section-title { color: white; }
+#cas-client .section-subtitle { color: rgba(255,255,255,0.6); }
+
+.cas-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; margin-top: 44px;
+}
+
+.cas-before {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 28px;
+}
+
+.cas-after {
+  background: rgba(45,107,228,0.15);
+  border: 1px solid rgba(45,107,228,0.3);
+  border-radius: var(--radius); padding: 28px;
+}
+
+.cas-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+
+.cas-before .cas-label { color: rgba(255,255,255,0.4); }
+.cas-after .cas-label { color: #7EB3FF; }
+
+.cas-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cas-item-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+.cas-item-text { font-size: 14px; line-height: 1.5; }
+.cas-before .cas-item-text { color: rgba(255,255,255,0.6); }
+.cas-after .cas-item-text { color: rgba(255,255,255,0.9); }
+
+.cas-result {
+  margin-top: 40px;
+  background: rgba(45,107,228,0.1);
+  border: 1px solid rgba(45,107,228,0.25);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex; align-items: center; gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cas-stat { text-align: center; }
+.cas-stat-value { font-family: 'Sora', sans-serif; font-size: 32px; font-weight: 700; color: #7EB3FF; }
+.cas-stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 3px; }
+.cas-divider { width: 1px; height: 56px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+.cas-quote { flex: 1; min-width: 200px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.75; font-style: italic; }
+
+/* ========== SOLUTION ========== */
+#solution { background: var(--white); }
+
+.solutions-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.solution-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: all var(--transition);
+  position: relative; overflow: hidden;
+}
+
+.solution-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--blue);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.solution-card:hover::before { transform: scaleX(1); }
+.solution-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: rgba(45,107,228,0.2); }
+
+.solution-icon {
+  width: 44px; height: 44px;
+  background: var(--blue-light); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 14px;
+}
+
+.solution-title { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.solution-text { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* ========== COMMENT ÇA MARCHE ========== */
+#comment { background: var(--bg-alt); }
+
+.steps {
+  display: flex; gap: 0;
+  position: relative; margin-top: 44px;
+}
+
+.steps::before {
+  content: '';
+  position: absolute; top: 27px;
+  left: calc(16.66% + 14px); right: calc(16.66% + 14px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--blue-mid) 100%);
+  z-index: 0;
+}
+
+.step { flex: 1; text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+
+.step-number {
+  width: 54px; height: 54px;
+  background: var(--blue); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-size: 20px; font-weight: 700; color: white;
+  margin: 0 auto 18px;
+  box-shadow: 0 4px 14px rgba(45,107,228,0.35);
+}
+
+.step-title { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.step-text { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* ========== COMPARATIF ========== */
+#comparatif { background: var(--white); overflow-x: auto; }
+
+.table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-lg); box-shadow: var(--shadow); margin-top: 44px; }
+
+.compare-table {
+  width: 100%; border-collapse: collapse; min-width: 580px;
+}
+
+.compare-table th {
+  padding: 18px 20px; font-family: 'Sora', sans-serif;
+  font-size: 13px; font-weight: 600; text-align: left;
+}
+
+.compare-table th:first-child { background: var(--bg-alt); color: var(--text-muted); }
+.compare-table th:not(:first-child):not(:last-child) { background: var(--bg-alt); color: var(--text-muted); }
+.compare-table th:last-child { background: var(--navy); color: white; }
+
+.compare-table td {
+  padding: 15px 20px; font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+.compare-table td:first-child { font-weight: 500; color: var(--navy); background: var(--bg); }
+.compare-table td:not(:first-child):not(:last-child) { color: var(--text-muted); background: var(--white); }
+.compare-table td:last-child { background: #F0F5FF; color: var(--navy); font-weight: 500; }
+
+.check { color: #059669; font-weight: 700; }
+
+/* ========== TARIFS ========== */
+#tarifs { background: var(--bg-alt); }
+
+.packs-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px; margin-top: 44px;
+}
+
+.pack-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  transition: all var(--transition);
+  position: relative;
+  display: flex; flex-direction: column;
+}
+
+.pack-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+
+.pack-card.featured {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), var(--shadow);
+}
+
+.pack-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--blue); color: white;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+  padding: 3px 12px; border-radius: 10px;
+  white-space: nowrap;
+}
+
+.pack-name { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+.pack-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+.pack-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+
+.pack-features { list-style: none; margin-bottom: 24px; flex: 1; }
+.pack-features li {
+  font-size: 13px; color: var(--text-muted);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;
+}
+.pack-features li:last-child { border-bottom: none; }
+.pack-features li::before { content: "✓"; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+
+.pack-cta {
+  display: block; text-align: center;
+  padding: 11px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: all var(--transition);
+  cursor: pointer;
+}
+
+.pack-cta-outline { border: 1.5px solid var(--border); color: var(--navy); background: transparent; }
+.pack-cta-outline:hover { border-color: var(--blue); color: var(--blue); }
 
-:root{
---clr-bg:#f5f7fb;
---clr-card:#ffffff;
---clr-primary:#0b1f3a;
---clr-primary-dark:#071426;
---clr-accent:#2563eb;
---clr-text:#0f172a;
---clr-muted:#64748b;
---radius:24px;
---transition:0.35s ease;
---shadow:0 15px 45px rgba(15,23,42,0.08);
---header-height:110px;
---modal-bg:rgba(0,0,0,0.6);
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+.pack-cta-filled {
+  background: var(--blue); color: white;
+  box-shadow: 0 4px 12px rgba(45,107,228,0.3); border: 1.5px solid transparent;
 }
+.pack-cta-filled:hover { background: var(--blue-hover); transform: translateY(-1px); }
 
-html{
-scroll-behavior:smooth;
+.pack-cta-note { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 10px; }
+
+/* ========== À PROPOS ========== */
+#apropos { background: var(--white); }
+
+.apropos-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 56px; align-items: start;
+}
+
+.apropos-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+
+.xp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+
+.xp-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px;
+}
+
+.xp-value { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 700; color: var(--blue); }
+.xp-label { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+.apropos-visual {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px;
+}
+
+.timeline-item {
+  display: flex; gap: 14px; padding-bottom: 24px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute; left: 19px; top: 36px; bottom: 0;
+  width: 2px; background: var(--border);
+}
+
+.timeline-item:last-child::before { display: none; }
+
+.timeline-dot {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--blue-light); border: 2px solid var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+
+.timeline-period { font-size: 11px; color: var(--blue); font-weight: 600; margin-bottom: 3px; }
+.timeline-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+.timeline-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* ========== FAQ ========== */
+#faq { background: var(--bg-alt); }
+
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 44px; }
+
+.faq-item {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+
+.faq-question {
+  padding: 18px 22px;
+  font-size: 14px; font-weight: 600; color: var(--navy);
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  transition: background var(--transition);
+  user-select: none; -webkit-user-select: none;
+  border: none; background: none; width: 100%; text-align: left;
+}
+
+.faq-question:hover { background: var(--bg); }
+
+.faq-chevron {
+  width: 20px; height: 20px; flex-shrink: 0;
+  background: var(--blue-light); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--blue);
+  transition: transform var(--transition);
 }
 
-body{
-font-family:'Inter',sans-serif;
-background:var(--clr-bg);
-color:var(--clr-text);
-line-height:1.7;
-overflow-x:hidden;
-position:relative;
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s;
+  font-size: 14px; color: var(--text-muted); line-height: 1.75;
+  padding: 0 22px;
+}
+
+.faq-item.open .faq-answer { max-height: 300px; padding: 0 22px 20px; }
+
+/* ========== CTA FINAL ========== */
+#cta-final {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a4a7a 100%);
+  text-align: center; padding: 96px 5%;
 }
 
-body::before{
-content:'';
-position:fixed;
-top:-200px;
-right:-200px;
-width:650px;
-height:650px;
-background:radial-gradient(circle,rgba(37,99,235,0.10),transparent 70%);
-z-index:-1;
-}
-
-body::after{
-content:'';
-position:fixed;
-bottom:-250px;
-left:-250px;
-width:700px;
-height:700px;
-background:radial-gradient(circle,rgba(15,23,42,0.08),transparent 70%);
-z-index:-1;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-max-width:1240px;
-margin:0 auto;
-padding:0 24px;
-}
-
-header{
-padding:16px 0;
-position:sticky;
-top:0;
-background:rgba(255,255,255,0.88);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-z-index:1000;
-border-bottom:1px solid rgba(15,23,42,0.05);
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:relative;
-}
-
-.logo img{
-height:110px;
-display:block;
-}
-
-.nav-links{
-list-style:none;
-display:flex;
-gap:34px;
-align-items:center;
-}
-
-.nav-links a{
-font-weight:600;
-font-size:0.96rem;
-color:var(--clr-text);
-position:relative;
-}
-
-.nav-links a::after{
-content:'';
-position:absolute;
-bottom:-6px;
-left:0;
-width:0;
-height:2px;
-background:var(--clr-accent);
-transition:0.3s;
-}
-
-.nav-links a:hover::after{
-width:100%;
-}
-
-/* MENU BURGER */
-
-.menu-toggle{
-display:none;
-background:none;
-border:none;
-cursor:pointer;
-font-size:38px;
-color:var(--clr-primary);
-z-index:1100;
-}
-
-.mobile-menu-active{
-display:flex !important;
-flex-direction:column;
-position:absolute;
-top:100%;
-right:0;
-width:100%;
-background:white;
-padding:25px;
-border-radius:0 0 24px 24px;
-box-shadow:0 20px 50px rgba(15,23,42,0.12);
-gap:22px;
-align-items:flex-start;
-}
-
-section{
-padding:120px 0;
-scroll-margin-top:120px;
-position:relative;
-}
-
-.hero{
-padding:160px 20px 130px;
-text-align:center;
-background:
-linear-gradient(135deg,#eef4ff 0%,#ffffff 50%,#f8fbff 100%);
-border-bottom:1px solid rgba(15,23,42,0.05);
-}
-
-.hero h1{
-font-size:clamp(54px,7vw,82px);
-line-height:1.02;
-letter-spacing:-3px;
-font-weight:800;
-max-width:1100px;
-margin:0 auto 30px;
-color:var(--clr-primary);
-}
-
-.hero p.tagline{
-font-size:1.35rem;
-font-weight:600;
-line-height:1.6;
-max-width:920px;
-margin:0 auto 22px;
-color:#10243f;
-}
-
-.hero p.description{
-max-width:860px;
-margin:0 auto 42px;
-font-size:1.08rem;
-line-height:1.9;
-color:var(--clr-muted);
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:18px 34px;
-border-radius:16px;
-font-weight:600;
-transition:all .3s ease;
-font-size:1rem;
-cursor:pointer;
-}
-
-.btn-primary{
-background:linear-gradient(135deg,#0f172a,#1d4ed8);
-color:white;
-box-shadow:0 15px 35px rgba(29,78,216,0.22);
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
-box-shadow:0 22px 45px rgba(29,78,216,0.28);
-}
-
-.audit-btn-wrapper{
-text-align:center;
-margin-top:25px;
-}
-
-h2.section-title{
-font-size:clamp(38px,5vw,58px);
-line-height:1.1;
-letter-spacing:-2px;
-text-align:center;
-margin-bottom:24px;
-color:var(--clr-primary);
-font-weight:800;
-max-width:950px;
-margin-left:auto;
-margin-right:auto;
-}
-
-p.section-subtitle{
-text-align:center;
-margin-bottom:75px;
-color:var(--clr-muted);
-font-size:1.12rem;
-line-height:1.9;
-max-width:850px;
-margin-left:auto;
-margin-right:auto;
-}
-
-/* ✅ FIX GRID 3 / 3 PROPRE */
-.why-grid,
-.services-grid,
-.about-grid{
-display:grid;
-gap:28px;
-grid-template-columns:repeat(3, 1fr);
-}
-
-.why-card,
-.service-card,
-.use-case,
-.about-card{
-background:rgba(255,255,255,0.92);
-padding:42px;
-border-radius:28px;
-box-shadow:var(--shadow);
-transition:all .35s ease;
-position:relative;
-overflow:hidden;
-border:1px solid rgba(255,255,255,0.7);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-}
-
-.why-card:hover,
-.service-card:hover,
-.use-case:hover,
-.about-card:hover{
-transform:translateY(-6px);
-box-shadow:0 25px 60px rgba(15,23,42,0.12);
-}
-
-.service-icon{
-font-size:2rem;
-margin-bottom:26px;
-color:#2563eb;
-background:rgba(37,99,235,0.08);
-padding:16px;
-border-radius:18px;
-width:72px;
-height:72px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.why-card h3,
-.service-card h3,
-.use-case h3,
-.about-card h3{
-font-size:1.45rem;
-line-height:1.3;
-margin-bottom:18px;
-font-weight:700;
-color:var(--clr-primary);
-}
-
-.why-card p,
-.service-card p,
-.use-case p,
-.about-card p{
-font-size:1rem;
-line-height:1.9;
-color:var(--clr-muted);
-}
-
-.use-case{
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.result-box{
-margin-top:28px;
-padding:22px;
-background:linear-gradient(135deg,#0f172a,#1e3a5f);
-color:white;
-border-radius:20px;
-font-weight:600;
-line-height:1.7;
-font-size:0.98rem;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:start;
-}
-
-.contact-info{
-padding:48px;
-background:linear-gradient(135deg,#f8fbff,#eef4ff);
-border-radius:28px;
-box-shadow:0 20px 50px rgba(15,23,42,0.08);
-}
-
-.contact-info h3{
-font-size:2rem;
-line-height:1.2;
-margin-bottom:28px;
-color:var(--clr-primary);
-}
-
-.contact-info p{
-margin-bottom:18px;
-font-size:1.04rem;
-}
-
-.contact-info a{
-color:var(--clr-primary);
-font-weight:600;
-}
-
-.contact-form iframe{
-width:100%;
-height:680px;
-border:none;
-border-radius:28px;
-box-shadow:var(--shadow);
-background:white;
-}
-
-.contact-icon{
-font-size:24px;
-color:var(--clr-accent);
-vertical-align:middle;
-margin-right:10px;
+#cta-final .section-tag { background: rgba(45,107,228,0.2); color: #7EB3FF; margin: 0 auto 14px; display: table; }
+#cta-final .section-title { color: white; max-width: 580px; margin: 0 auto 14px; }
+#cta-final .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto 44px; text-align: center; max-width: 520px; }
+
+.cta-box {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  padding: 36px; max-width: 520px; margin: 0 auto;
 }
 
-footer{
-text-align:center;
-padding:50px 20px;
-background:var(--clr-primary-dark);
-color:white;
-font-size:0.95rem;
-margin-top:100px;
+.cta-features {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 28px; text-align: left;
 }
 
-footer a{
-color:white;
-margin:0 10px;
+.cta-feature {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: rgba(255,255,255,0.8);
 }
 
-/* Modal */
+.cta-feature-icon { font-size: 15px; }
 
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:var(--modal-bg);
-z-index:2000;
-justify-content:center;
-align-items:center;
-padding:20px;
+.cta-btn {
+  display: block; width: 100%;
+  background: var(--blue); color: white;
+  padding: 15px 28px; border-radius: 10px;
+  font-size: 15px; font-weight: 600;
+  text-decoration: none; text-align: center;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(45,107,228,0.4);
+  margin-bottom: 12px;
 }
+
+.cta-btn:hover { background: var(--blue-hover); transform: translateY(-2px); }
+.cta-note { font-size: 12px; color: rgba(255,255,255,0.35); }
 
-.modal-content{
-background:white;
-border-radius:24px;
-max-width:820px;
-width:100%;
-max-height:85%;
-overflow-y:auto;
-padding:40px;
-position:relative;
-box-shadow:0 25px 60px rgba(0,0,0,0.2);
+/* ========== FOOTER ========== */
+footer {
+  background: var(--navy); padding: 36px 5%;
 }
 
-.modal-content h3{
-margin-bottom:20px;
-font-size:2rem;
-color:var(--clr-primary);
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 20px;
 }
 
-.modal-content p{
-margin-bottom:16px;
-line-height:1.8;
-color:var(--clr-text);
+.footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-logo-img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; }
+.footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7); }
+
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 13px; color: rgba(255,255,255,0.4);
+  text-decoration: none; transition: color var(--transition);
 }
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
 
-.modal-close{
-position:absolute;
-top:16px;
-right:20px;
-font-size:28px;
-cursor:pointer;
-color:var(--clr-primary);
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* ========== MODALS LÉGALES ========== */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(13,43,78,0.7); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center; padding: 20px;
 }
+
+.modal-overlay.active { display: flex; }
 
-/* MOBILE FIX PROPRE */
-@media(max-width:1100px){
-.why-grid,
-.services-grid,
-.about-grid{
-grid-template-columns:repeat(2, 1fr);
+.modal {
+  background: var(--white); border-radius: var(--radius-lg);
+  max-width: 600px; width: 100%; max-height: 80vh;
+  overflow-y: auto; padding: 36px;
+  position: relative;
 }
+
+.modal h3 { font-size: 20px; color: var(--navy); margin-bottom: 20px; }
+.modal h4 { font-size: 15px; color: var(--navy); margin: 18px 0 8px; }
+.modal p, .modal li { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 10px; }
+.modal ul { padding-left: 18px; margin-bottom: 10px; }
+
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--bg); border: none; cursor: pointer;
+  font-size: 16px; color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
 }
+
+.modal-close:hover { background: var(--border); }
+
+/* ========== RESPONSIVE ========== */
 
-@media(max-width:900px){
 
-.hero{
-padding:130px 20px 100px;
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .hero-dashboard-wrap { display: none; }
+  .problems-grid, .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+  .cas-grid { grid-template-columns: 1fr; }
+  .apropos-inner { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+
+  .steps { flex-direction: column; gap: 32px; }
+  .steps::before { display: none; }
+  .step { padding: 0; text-align: left; display: flex; flex-direction: column; align-items: flex-start; }
+  .step-number { margin: 0 0 14px 0; }
+
+  .cas-result { gap: 16px; }
+  .cas-divider { display: none; }
+
+  nav { padding: 0 4%; }
+  .nav-links { display: none; gap: 0; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+    background: var(--white); padding: 32px 5%;
+    gap: 24px; align-items: flex-start;
+    border-top: 1px solid var(--border);
+    z-index: 999;
+  }
+  .nav-links.open a { font-size: 18px; color: var(--navy); }
+  .nav-links.open .nav-cta {
+    background: var(--blue) !important;
+    padding: 12px 24px !important;
+    border-radius: 10px;
+    font-size: 16px !important;
+  }
+  .nav-toggle { display: flex; }
 }
+
+@media (max-width: 680px) {
+  section { padding: 64px 4%; }
+  #hero { padding-top: 120px; padding-bottom: 64px; }
+
+  .problems-grid, .solutions-grid { grid-template-columns: 1fr; }
+  .packs-grid { grid-template-columns: 1fr; }
+  .xp-grid { grid-template-columns: 1fr 1fr; }
+
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .hero-stats { gap: 20px; }
+
+  .cas-result { flex-direction: column; text-align: center; }
+  .cas-stat { width: 100%; }
 
-.hero h1{
-font-size:46px;
-line-height:1.05;
+  .cta-box { padding: 24px 20px; }
+
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-links { gap: 14px; }
+
+  .modal { padding: 24px 20px; margin: 0; border-radius: var(--radius); }
 }
 
-h2.section-title{
-font-size:38px;
+@media (max-width: 400px) {
+  .section-title { font-size: 22px; }
+  .hero-title { font-size: 26px; }
+  .xp-grid { grid-template-columns: 1fr; }
 }
 
-.logo img{
-height:85px;
+/* Touch targets */
+@media (hover: none) {
+  .faq-question { padding: 20px 22px; }
+  .nav-links a { padding: 4px 0; }
+  .btn-primary, .btn-secondary, .pack-cta { min-height: 44px; }
 }
 
-.menu-toggle{
-display:block;
+/* ========== HERO DASHBOARD ========== */
+.hero-dashboard-wrap {
+  position: relative;
+  filter: drop-shadow(0 20px 60px rgba(13,43,78,0.18));
 }
 
-.nav-links{
-display:none;
+.hero-dashboard-inner {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0D1B2A;
 }
 
-.contact-grid{
-display:flex;
-flex-direction:column;
+.hero-dashboard-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: top left;
 }
 
-.why-card,
-.service-card,
-.use-case,
-.about-card{
-padding:30px;
+.hero-dashboard-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(13,43,78,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
-.contact-form iframe{
-height:560px;
+/* ========== ICON SVG ========== */
+.icon-box {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; flex-shrink: 0;
 }
+.icon-box svg { width: 22px; height: 22px; }
+.icon-box-red { background: #FEF2F2; }
+.icon-box-red svg { stroke: #DC2626; }
+.icon-box-blue { background: var(--blue-light); }
+.icon-box-blue svg { stroke: var(--blue); }
+.icon-box-green { background: #ECFDF5; }
+.icon-box-green svg { stroke: #059669; }
+.icon-box-amber { background: #FFFBEB; }
+.icon-box-amber svg { stroke: #D97706; }
+.icon-box-purple { background: #F5F3FF; }
+.icon-box-purple svg { stroke: #7C3AED; }
+.icon-box-navy { background: var(--bg-alt); }
+.icon-box-navy svg { stroke: var(--navy); }
 
-section{
-padding:90px 0;
+/* Step numbers remplacement */
+.step-icon-wrap {
+  width: 56px; height: 56px;
+  background: var(--blue); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px;
+  box-shadow: 0 4px 14px rgba(45,107,228,0.35);
+  flex-shrink: 0;
 }
+.step-icon-wrap svg { width: 24px; height: 24px; stroke: white; }
+
+/* ========== OUTILS COMPATIBLES ========== */
+#outils { background: var(--white); padding: 56px 5%; }
+#outils .container { text-align: center; }
+#outils .section-tag { margin: 0 auto 14px; display: table; }
+#outils h2 { font-size: clamp(20px, 2.5vw, 28px); color: var(--navy); margin-bottom: 8px; }
+#outils p { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+.tools-track-wrap {
+  overflow: hidden; position: relative;
+  mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
 }
 
-@media(max-width:700px){
-.why-grid,
-.services-grid,
-.about-grid{
-grid-template-columns:1fr;
+.tools-track {
+  display: flex; gap: 16px;
+  width: max-content;
+  animation: scroll-tools 28s linear infinite;
 }
+
+.tools-track:hover { animation-play-state: paused; }
+
+@keyframes scroll-tools {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
+.tool-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 40px; padding: 10px 18px;
+  white-space: nowrap; transition: border-color var(--transition);
+}
+.tool-chip:hover { border-color: var(--blue); }
+.tool-chip img { width: 20px; height: 20px; object-fit: contain; }
+.tool-chip span { font-size: 13px; font-weight: 500; color: var(--navy); }
 </style>
 </head>
-
 <body>
 
-<header>
-<nav class="container">
-<a href="#" class="logo">
-<img src="logo.png" alt="AI Process LAB">
-</a>
-
-<button class="menu-toggle" id="menu-toggle">
-<span class="material-icons">menu</span>
-</button>
-
-<ul class="nav-links" id="mobile-menu">
-<li><a href="#pourquoi">Pourquoi nous ?</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#realisations">Résultats</a></li>
-<li><a href="#apropos">Approche</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<!-- NAV -->
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="#" class="nav-logo" aria-label="AI Process Lab, Accueil">
+    <img src="logo.png" alt="AI Process Lab" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">AI</div>
+    <span class="nav-logo-text">AI Process Lab</span>
+  </a>
+  <ul class="nav-links" id="nav-links" role="list">
+    <li><a href="#probleme">Pourquoi ?</a></li>
+    <li><a href="#solution">Services</a></li>
+    <li><a href="#tarifs">Offres</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="#cta-final" class="nav-cta">Diagnostic gratuit</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-</header>
 
-<section class="hero" id="top">
-
-<div class="container">
-
-<h1>
-Fiabilisez votre cycle commercial.<br>
-Ne laissez plus vos opportunités se perdre.
-</h1>
-
-<p class="tagline">
-AI Process LAB aide les PME à structurer le traitement des leads,
-automatiser les relances et sécuriser chaque opportunité commerciale.
-</p>
-
-<p class="description">
-Beaucoup d’entreprises pensent manquer de leads alors qu’elles perdent surtout
-du chiffre d’affaires entre la demande entrante, le suivi commercial,
-les relances et la signature.
-Nous structurons et fiabilisons ces étapes critiques pour rendre votre activité plus fluide, réactive et prévisible.
-</p>
-
-<div class="audit-btn-wrapper">
-<a href="https://app.youform.com/forms/giq4ql5u"
-class="btn btn-primary">
-Analyser mon cycle commercial
-</a>
-</div>
-
-</div>
-
+<!-- HERO -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge" aria-hidden="true">
+        <div class="hero-badge-dot"></div>
+        Spécialiste cycle commercial · TPE et PME
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        Vous ne manquez pas de prospects.<br>
+        <span>C'est le suivi qui fait toute la différence.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Je mets en place un système qui traite chaque demande avec la même rigueur, de la prise de contact à la facture, quel que soit le volume d'activité ou la disponibilité de votre équipe.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://app.youform.com/forms/giq4ql5u" class="btn-primary">
+          Diagnostic gratuit 30 min →
+        </a>
+        <a href="#solution" class="btn-secondary">
+          Découvrir les services ↓
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value">20h</span>
+          <span class="hero-stat-label">économisées / mois</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">2 semaines</span>
+          <span class="hero-stat-label">délai de mise en place</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">25 ans</span>
+          <span class="hero-stat-label">d'expérience terrain</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">FR · BE · CH · CA</span>
+          <span class="hero-stat-label">Monde francophone</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-dashboard-wrap" aria-label="Aperçu du dashboard AI Process Lab">
+      <div class="hero-dashboard-inner">
+        <img
+          src="dashboard-preview.png"
+          alt="Dashboard commercial AI Process Lab, pipeline, qualification IA, RDV, devis et factures en temps réel"
+          class="hero-dashboard-img"
+          loading="eager"
+        >
+        <div class="hero-dashboard-badge">
+          <span class="auto-dot" style="flex-shrink:0"></span>
+          Tableau de bord livré clé en main
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="pourquoi">
-
-<div class="container">
-
-<h2 class="section-title">
-Pourquoi les PME perdent du chiffre d’affaires sans le voir ?
-</h2>
-
-<p class="section-subtitle">
-Le problème vient rarement du volume de leads.
-Il vient souvent du manque de suivi, de relance et de visibilité commerciale.
-</p>
-
-<div class="why-grid">
-
-<div class="why-card">
-<span class="material-icons service-icon">schedule</span>
-<h3>Des demandes traitées trop tard</h3>
-<p>
-Les prospects arrivent mais ne reçoivent pas de réponse suffisamment rapide.
-Quelques heures de retard peuvent suffire à perdre une opportunité.
-</p>
-</div>
-
-<div class="why-card">
-<span class="material-icons service-icon">sync_problem</span>
-<h3>Des relances irrégulières</h3>
-<p>
-Les équipes manquent de temps, les devis restent sans suivi
-et certaines opportunités disparaissent simplement du radar.
-</p>
-</div>
-
-<div class="why-card">
-<span class="material-icons service-icon">insights</span>
-<h3>Un pipeline commercial difficile à piloter</h3>
-<p>
-Peu de visibilité sur les priorités commerciales,
-les actions à mener et les opportunités réellement génératrices de business.
-</p>
-</div>
-
-</div>
-
-<div class="audit-btn-wrapper">
-<a href="https://app.youform.com/forms/giq4ql5u"
-class="btn btn-primary">
-Faire analyser mon organisation
-</a>
-</div>
-
-</div>
-
+<!-- OUTILS COMPATIBLES -->
+<section id="outils">
+  <div class="container">
+    <div class="section-tag">Intégrations</div>
+    <h2>Compatible avec vos outils existants</h2>
+    <p>Le système se connecte à ce que vous utilisez déjà. Aucun remplacement, aucune migration.</p>
+    <div class="tools-track-wrap">
+      <div class="tools-track">
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail"><span>Gmail</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/googlecalendar/4285F4" alt="Google Calendar"><span>Google Calendar</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/googledrive/4285F4" alt="Google Drive"><span>Google Drive</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable"><span>Airtable</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/make/6D00CC" alt="Make"><span>Make</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/openai/000000" alt="OpenAI"><span>OpenAI GPT-4o</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets"><span>Google Sheets</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/notion/000000" alt="Notion"><span>Notion</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/slack/4A154B" alt="Slack"><span>Slack</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe"><span>Stripe</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/typeform/262627" alt="Typeform"><span>Typeform</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot"><span>HubSpot</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail"><span>Gmail</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/googlecalendar/4285F4" alt="Google Calendar"><span>Google Calendar</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/googledrive/4285F4" alt="Google Drive"><span>Google Drive</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable"><span>Airtable</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/make/6D00CC" alt="Make"><span>Make</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/openai/000000" alt="OpenAI"><span>OpenAI GPT-4o</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets"><span>Google Sheets</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/notion/000000" alt="Notion"><span>Notion</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/slack/4A154B" alt="Slack"><span>Slack</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe"><span>Stripe</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/typeform/262627" alt="Typeform"><span>Typeform</span></div>
+        <div class="tool-chip"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot"><span>HubSpot</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="services">
-
-<div class="container">
-
-<h2 class="section-title">
-Des systèmes concrets pour fiabiliser votre activité commerciale
-</h2>
-
-<p class="section-subtitle">
-Nous mettons en place des workflows commerciaux structurés permettant aux dirigeants et équipes de traiter plus efficacement les opportunités, réduire les pertes de leads et améliorer le suivi commercial au quotidien.
-</p>
-
-<div class="services-grid">
-
-<div class="service-card">
-<span class="material-icons service-icon">hub</span>
-<h3>Centralisation des demandes et leads</h3>
-<p>
-Toutes vos demandes entrantes sont regroupées dans un système unique afin d’éviter les pertes d’informations, les oublis et les suivis dispersés.
-</p>
-</div>
-
-<div class="service-card">
-<span class="material-icons service-icon">notifications_active</span>
-<h3>Relances commerciales automatisées</h3>
-<p>
-Les prospects, devis et demandes en attente sont suivis automatiquement pour réduire les opportunités oubliées et améliorer la réactivité commerciale.
-</p>
-</div>
-
-<div class="service-card">
-<span class="material-icons service-icon">query_stats</span>
-<h3>Pipeline commercial plus lisible</h3>
-<p>
-Vous visualisez clairement les opportunités en cours, les actions prioritaires et les points de blocage qui ralentissent votre activité.
-</p>
-</div>
-
-<div class="service-card">
-<span class="material-icons service-icon">description</span>
-<h3>Suivi structuré des devis</h3>
-<p>
-Les devis envoyés sont suivis automatiquement avec rappels et relances afin de limiter les dossiers qui restent sans réponse.
-</p>
-</div>
-
-<div class="service-card">
-<span class="material-icons service-icon">mail_outline</span>
-<h3>Traitement plus fluide des demandes</h3>
-<p>
-Les demandes clients sont organisées, attribuées et suivies plus efficacement pour éviter les retards et améliorer le traitement commercial.
-</p>
-</div>
-
-<div class="service-card">
-<span class="material-icons service-icon">settings_suggest</span>
-<h3>Mise en place de workflows adaptés</h3>
-<p>
-Chaque entreprise possède son propre fonctionnement. Les workflows sont construits selon votre organisation réelle pour rester simples, fiables et durables.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-<section id="realisations">
-
-<div class="container">
-
-<h2 class="section-title">
-Résultats observés après structuration du cycle commercial
-</h2>
-
-<p class="section-subtitle">
-L’objectif n’est pas uniquement d’automatiser.
-Fiabiliser le traitement de vos opportunités
-et sécuriser votre chiffre d’affaires est notre priorité.
-</p>
-
-<div class="why-grid">
-
-<div class="use-case">
-<span class="material-icons service-icon">trending_up</span>
-
-<h3>Réduction du temps de réponse commercial</h3>
-
-<p>
-Les leads entrants sont traités plus rapidement,
-ce qui améliore fortement la prise de contact et la conversion.
-</p>
-
-<div class="result-box">
-✅ Jusqu’à +40% de conversion lead → rendez-vous
-</div>
-
-</div>
-
-<div class="use-case">
-
-<span class="material-icons service-icon">shield</span>
-
-<h3>Moins d’opportunités oubliées</h3>
-
-<p>
-Chaque demande est suivie,
-relancée et visible dans le pipeline commercial.
-</p>
-
-<div class="result-box">
-✅ Forte réduction des leads non traités ou oubliés
-</div>
-
-</div>
-
-<div class="use-case">
-
-<span class="material-icons service-icon">payments</span>
-
-<h3>Une activité commerciale plus prévisible</h3>
-
-<p>
-Les dirigeants disposent enfin d’une vision claire
-sur l’avancement des opportunités et les priorités.
-</p>
-
-<div class="result-box">
-✅ Meilleure visibilité du cycle commercial complet
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- PROBLÈME -->
+<section id="probleme" aria-labelledby="probleme-title">
+  <div class="container">
+    <div class="section-tag">Le problème</div>
+    <h2 class="section-title" id="probleme-title">Vous avez des prospects.<br>Le suivi systématique, lui, peut manquer.</h2>
+    <p class="section-subtitle">La plupart des TPE et PME pensent avoir un problème de génération de leads. En réalité, elles perdent des opportunités existantes faute de suivi structuré.</p>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="icon-box icon-box-red" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 class="problem-title">Des leads traités trop tard</h3>
+        <p class="problem-text">Un prospect qui ne reçoit pas de réponse dans les heures qui suivent sa demande passe à la concurrence. Chaque heure de retard coûte des opportunités réelles.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon-box icon-box-red" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+        <h3 class="problem-title">Des devis sans relance</h3>
+        <p class="problem-text">Les équipes manquent de temps, les devis restent sans suivi et certaines opportunités disparaissent du radar. Une relance au bon moment peut faire basculer une décision.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon-box icon-box-red" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <h3 class="problem-title">Aucune visibilité commerciale</h3>
+        <p class="problem-text">Sans pipeline structuré, impossible de savoir où en sont vos prospects, quelles actions prioriser et combien de chiffre est réellement en jeu à chaque instant.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="apropos">
-
-<div class="container">
-
-<h2 class="section-title">
-Une vision terrain des opérations commerciales
-</h2>
-
-<p class="section-subtitle">
-AI Process LAB accompagne les PME qui souhaitent structurer leur fonctionnement commercial, fiabiliser le traitement des opportunités et gagner en visibilité sur leur activité.
-</p>
-
-<div class="about-grid">
-
-<div class="about-card">
-
-<span class="material-icons service-icon">engineering</span>
-
-<h3>Une expérience opérationnelle concrète</h3>
-
-<p>
-Après plus de 25 ans d’expérience entre informatique, coordination opérationnelle et développement commercial, AI Process LAB a été créé pour résoudre un problème fréquent : des opportunités commerciales perdues à cause d’un manque d’organisation et de suivi.
-</p>
-
-</div>
-
-<div class="about-card">
-
-<span class="material-icons service-icon">sync_alt</span>
-
-<h3>Des systèmes conçus pour fonctionner au quotidien</h3>
-
-<p>
-L’objectif n’est pas d’ajouter de la complexité.
-Nous mettons en place des workflows simples, fiables et adaptés au fonctionnement réel de votre entreprise afin que les équipes puissent les utiliser facilement au quotidien.
-</p>
-
-</div>
-
-<div class="about-card">
-
-<span class="material-icons service-icon">trending_up</span>
-
-<h3>Une logique orientée chiffre d’affaires</h3>
-
-<p>
-Chaque workflow mis en place vise un objectif concret : améliorer le suivi commercial, réduire les opportunités oubliées et rendre l’activité plus prévisible et plus performante.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+<!-- CAS CLIENT -->
+<section id="cas-client" aria-labelledby="cas-title">
+  <div class="container">
+    <div class="section-tag">Résultats concrets</div>
+    <h2 class="section-title" id="cas-title">20 heures économisées chaque mois</h2>
+    <p class="section-subtitle">La différence concrète entre une gestion manuelle et un cycle commercial automatisé, pour une structure avec 20 leads mensuels.</p>
+    <div class="cas-grid">
+      <div class="cas-before">
+        <div class="cas-label" style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.5" stroke="rgba(255,255,255,0.3)"/><line x1="4.5" y1="4.5" x2="9.5" y2="9.5" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/><line x1="9.5" y1="4.5" x2="4.5" y2="9.5" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg> Sans système structuré</div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#DC2626" stroke-width="1.5"/><line x1="8" y1="4" x2="8" y2="8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="8" x2="11" y2="10" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="cas-item-text">17 min par lead : saisie manuelle, mail de bienvenue, lien RDV à envoyer</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#DC2626" stroke-width="1.5"/><line x1="8" y1="4" x2="8" y2="8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="8" x2="11" y2="10" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="cas-item-text">10 min par RDV : confirmations et rappels J-1 et H-1 à gérer manuellement</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#DC2626" stroke-width="1.5"/><line x1="8" y1="4" x2="8" y2="8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="8" x2="11" y2="10" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="cas-item-text">50 min par devis : deux relances à rédiger et envoyer sans oublier personne</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#DC2626" stroke-width="1.5"/><line x1="8" y1="4" x2="8" y2="8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="8" x2="11" y2="10" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="cas-item-text">35 min par facture : création PDF, envoi, suivi des relances impayées</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#DC2626" stroke-width="1.5"/><line x1="8" y1="4" x2="8" y2="8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="8" x2="11" y2="10" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="cas-item-text">7 min par mail prospect : lecture, qualification, décision d'action à prendre</span></div>
+      </div>
+      <div class="cas-after">
+        <div class="cas-label" style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6.5" stroke="#7EB3FF"/><polyline points="4,7 6.5,9.5 10,5" stroke="#7EB3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Avec AI Process Lab</div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#059669" stroke-width="1.5"/><polyline points="5,8 7,10 11,6" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cas-item-text">Lead reçu : créé dans la base, mail envoyé et lien RDV généré automatiquement</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#059669" stroke-width="1.5"/><polyline points="5,8 7,10 11,6" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cas-item-text">RDV confirmé : Base mise à jour, rappels J-1 et H-1 envoyés automatiquement</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#059669" stroke-width="1.5"/><polyline points="5,8 7,10 11,6" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cas-item-text">Devis sans réponse : deux relances déclenchées aux délais que vous choisissez</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#059669" stroke-width="1.5"/><polyline points="5,8 7,10 11,6" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cas-item-text">Devis accepté : facture générée et envoyée sans aucune intervention</span></div>
+        <div class="cas-item"><span class="cas-item-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#059669" stroke-width="1.5"/><polyline points="5,8 7,10 11,6" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cas-item-text">Mail prospect reçu : analysé par IA, qualifié chaud / neutre / froid automatiquement</span></div>
+      </div>
+    </div>
+    <div class="cas-result">
+      <div class="cas-stat">
+        <div class="cas-stat-value">20h</div>
+        <div class="cas-stat-label">économisées / mois</div>
+      </div>
+      <div class="cas-divider"></div>
+      <div class="cas-stat">
+        <div class="cas-stat-value">0</div>
+        <div class="cas-stat-label">lead oublié</div>
+      </div>
+      <div class="cas-divider"></div>
+      <div class="cas-stat">
+        <div class="cas-stat-value">7j</div>
+        <div class="cas-stat-label">pour être opérationnel</div>
+      </div>
+      <div class="cas-divider"></div>
+      <p class="cas-quote">"J'ai structuré mon propre cycle commercial avant de proposer ce système à mes clients. Le résultat : zéro lead oublié, zéro devis sans relance, zéro facture envoyée en retard."<br><strong style="color:rgba(255,255,255,0.8);font-style:normal">Yacine B., fondateur AI Process Lab</strong></p>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-
-<div class="container">
-
-<h2 class="section-title">
-Analysons votre organisation commerciale
-</h2>
-
-<p class="section-subtitle">
-Échangeons sur vos process actuels,
-vos pertes de leads potentielles
-et les axes d’amélioration possibles.
-</p>
-
-<div class="contact-grid">
-
-<div class="contact-info">
-
-<h3>
-Parlons de vos enjeux commerciaux
-</h3>
-
-<p>
-<span class="material-icons contact-icon">email</span>
-<a href="mailto:yb@ai-process-lab.com">
-yb@ai-process-lab.com
-</a>
-</p>
-
-<p>
-<span class="material-icons contact-icon">phone_iphone</span>
-<a href="tel:+33769847221">
-07 69 84 72 21
-</a>
-</p>
-
-<p>
-<span class="material-icons contact-icon">location_on</span>
-1 rue Marguerin 75014 Paris 
-</p>
-
-</div>
-
-<div class="contact-form">
-<iframe
-src="https://app.youform.com/forms/giq4ql5u"
-title="Formulaire AI Process LAB">
-</iframe>
-</div>
-
-</div>
-
-</div>
-
+<!-- SOLUTION -->
+<section id="solution" aria-labelledby="solution-title">
+  <div class="container">
+    <div class="section-tag">Ce que je mets en place</div>
+    <h2 class="section-title" id="solution-title">Un cycle commercial complet,<br>du lead à la facture</h2>
+    <p class="section-subtitle">Chaque système est livré clé en main, testé et documenté. Aucune compétence technique requise pour l'utiliser au quotidien.</p>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="icon-box icon-box-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v8"/><path d="M8 13l4 4 4-4"/></svg></div>
+        <h3 class="solution-title">Capture et qualification des leads</h3>
+        <p class="solution-text">Chaque nouveau prospect est automatiquement enregistré, qualifié et notifié. Votre lien de prise de RDV est envoyé instantanément, avec analyse IA de chaque réponse reçue.</p>
+      </div>
+      <div class="solution-card">
+        <div class="icon-box icon-box-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
+        <h3 class="solution-title">Gestion automatisée des RDV</h3>
+        <p class="solution-text">Confirmation, rappel J-1, rappel H-1, gestion des annulations et replanifications : tout est automatique. Vos prospects ne ratent plus jamais un rendez-vous.</p>
+      </div>
+      <div class="solution-card">
+        <div class="icon-box icon-box-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
+        <h3 class="solution-title">Devis et relances commerciales</h3>
+        <p class="solution-text">Génération automatique du devis PDF à l'envoi, puis relances programmées aux délais que vous choisissez. Aucun devis ne reste sans réponse sans que vous le sachiez.</p>
+      </div>
+      <div class="solution-card">
+        <div class="icon-box icon-box-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></div>
+        <h3 class="solution-title">Facturation automatique</h3>
+        <p class="solution-text">Dès qu'un devis est accepté, la facture est générée et envoyée automatiquement. Les relances pour impayés se déclenchent sans intervention de votre part.</p>
+      </div>
+      <div class="solution-card">
+        <div class="icon-box icon-box-purple" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M9 9h.01M15 9h.01"/><path d="M9 15c.83 1 2.17 1 3 1s2.17 0 3-1"/></svg></div>
+        <h3 class="solution-title">Analyse IA des prospects</h3>
+        <p class="solution-text">Chaque mail reçu d'un prospect est analysé par intelligence artificielle : ton du message, synthèse, action recommandée. Vous savez immédiatement qui rappeler en priorité.</p>
+      </div>
+      <div class="solution-card">
+        <div class="icon-box icon-box-navy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
+        <h3 class="solution-title">Dashboard de pilotage</h3>
+        <p class="solution-text">Une vue en temps réel de votre pipeline : leads actifs, devis en cours, factures en attente, RDV à venir. Toutes vos données commerciales accessibles en un coup d'œil.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- REMPLACE UNIQUEMENT TON FOOTER ACTUEL PAR CELUI-CI -->
+<!-- COMMENT ÇA MARCHE -->
+<section id="comment" aria-labelledby="comment-title">
+  <div class="container">
+    <div class="section-tag">Le processus</div>
+    <h2 class="section-title" id="comment-title">Opérationnel en moins de 2 semaines</h2>
+    <p class="section-subtitle">Un processus simple et structuré, de la première conversation à la livraison clé en main.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3 class="step-title">Diagnostic gratuit</h3>
+        <p class="step-text">30 minutes pour analyser votre cycle commercial actuel, identifier les pertes d'opportunités et définir ce que le système va résoudre concrètement pour vous.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3 class="step-title">Mise en place</h3>
+        <p class="step-text">Je construis et configure votre système complet, adapté à votre fonctionnement réel. Vous ne changez pas vos outils existants : Gmail, agenda, facturation.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3 class="step-title">Livraison et formation</h3>
+        <p class="step-text">Votre système est testé, documenté et livré clé en main. Une session de prise en main pour que vous soyez autonome dès le premier jour.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer>
-© 2026 AI Process LAB — Structurez vos ventes. Sécurisez votre croissance.
+<!-- COMPARATIF -->
+<section id="comparatif" aria-labelledby="comparatif-title">
+  <div class="container">
+    <div class="section-tag">Pourquoi AI Process Lab</div>
+    <h2 class="section-title" id="comparatif-title">Comparez vos options</h2>
+    <p class="section-subtitle">Recruter un assistant commercial ou externaliser à une agence : voici ce que ça donne face à une automatisation sur mesure.</p>
+    <div class="table-wrapper">
+      <table class="compare-table" role="table" aria-label="Comparaison des options">
+        <thead>
+          <tr>
+            <th scope="col">Critère</th>
+            <th scope="col">Recrutement salarié</th>
+            <th scope="col">Agence / Freelance</th>
+            <th scope="col">✦ AI Process Lab</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coût mensuel</td>
+            <td>2 000 bruts + charges patronales</td>
+            <td>2 500 à 4 000 €/mois selon prestataire</td>
+            <td><span class="check">Fraction du coût d'un salarié</span></td>
+          </tr>
+          <tr>
+            <td>Délai de démarrage</td>
+            <td>4 à 12 semaines</td>
+            <td>2 à 6 semaines</td>
+            <td><span class="check">Moins de 2 semaines en moyenne</span></td>
+          </tr>
+          <tr>
+            <td>Disponibilité</td>
+            <td>Horaires de bureau uniquement</td>
+            <td>Variable selon contrat</td>
+            <td><span class="check">Réactivité garantie</span></td>
+          </tr>
+          <tr>
+            <td>Risque</td>
+            <td>Préavis, charges sociales, turnover</td>
+            <td>Dépendance au prestataire</td>
+            <td><span class="check">Système vous appartient</span></td>
+          </tr>
+          <tr>
+            <td>Evolutivité</td>
+            <td>Nouveau recrutement nécessaire</td>
+            <td>Nouveau contrat à négocier</td>
+            <td><span class="check">Automatique, sans coût supplémentaire</span></td>
+          </tr>
+          <tr>
+            <td>Engagement</td>
+            <td>CDI difficile à stopper</td>
+            <td>Contrat à durée fixe</td>
+            <td><span class="check">Sans engagement</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-<div style="margin-top:12px;">
-<a href="#" onclick="openModal('legal'); return false;">Mentions légales</a>
-|
-<a href="#" onclick="openModal('privacy'); return false;">Politique de confidentialité</a>
-</div>
+<!-- TARIFS -->
+<section id="tarifs" aria-labelledby="tarifs-title">
+  <div class="container">
+    <div class="section-tag">Nos offres</div>
+    <h2 class="section-title" id="tarifs-title">Acquisition · Conversion · Pilotage</h2>
+    <p class="section-subtitle">Démarrez par le module le plus urgent, ou optez pour le système complet. Chaque pack est livré clé en main, testé et documenté. Tarif sur mesure selon votre activité.</p>
+    <div class="packs-grid">
+
+      <!-- ACQUISITION -->
+      <div class="pack-card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:38px;height:38px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D6BE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="pack-name" style="margin:0">Acquisition</span>
+        </div>
+        <div class="pack-title">Captez et qualifiez chaque lead</div>
+        <p class="pack-desc">Chaque demande entrante est automatiquement enregistrée, qualifiée et orientée vers la prise de RDV. Aucun contact ne tombe dans l'oubli.</p>
+        <ul class="pack-features">
+          <li>Capture multi-canaux des leads (formulaire, mail, site)</li>
+          <li>Centralisation automatique dans Airtable</li>
+          <li>Analyse IA des mails prospects (chaud / neutre / froid)</li>
+          <li>Envoi automatique du lien de prise de RDV</li>
+          <li>Relances no-show et rappels J-1 / H-1</li>
+          <li>Dashboard de suivi en temps réel</li>
+        </ul>
+        <a href="https://app.youform.com/forms/giq4ql5u" class="pack-cta pack-cta-outline">Demander un devis</a>
+        <p class="pack-cta-note">Setup + maintenance mensuelle</p>
+      </div>
+
+      <!-- CONVERSION -->
+      <div class="pack-card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:38px;height:38px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2D6BE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+          </div>
+          <span class="pack-name" style="margin:0">Conversion</span>
+        </div>
+        <div class="pack-title">Du devis signé à la facture encaissée</div>
+        <p class="pack-desc">Chaque devis est suivi et relancé automatiquement. Dès validation, la facture part sans intervention. Les impayés sont relancés sans que vous y pensiez.</p>
+        <ul class="pack-features">
+          <li>Génération automatique des devis PDF</li>
+          <li>Relances devis 1 et 2 programmées</li>
+          <li>Suivi statut devis en temps réel</li>
+          <li>Génération et envoi automatique de la facture</li>
+          <li>Relances impayées automatisées</li>
+          <li>Historique complet par client</li>
+        </ul>
+        <a href="https://app.youform.com/forms/giq4ql5u" class="pack-cta pack-cta-outline">Demander un devis</a>
+        <p class="pack-cta-note">Setup + maintenance mensuelle</p>
+      </div>
+
+      <!-- PILOTAGE -->
+      <div class="pack-card featured">
+        <div class="pack-badge">⭐ Recommandé</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:38px;height:38px;background:#EEF2FF;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <span class="pack-name" style="margin:0;color:#4F46E5">Pilotage</span>
+        </div>
+        <div class="pack-title">Le cycle commercial complet, de A à Z</div>
+        <p class="pack-desc">L'intégralité du cycle commercial automatisé : du premier contact entrant à la facture encaissée. Un système unique, cohérent, livré clé en main.</p>
+        <ul class="pack-features">
+          <li>Tous les modules Acquisition et Conversion</li>
+          <li>12 scénarios d'automatisation interconnectés</li>
+          <li>Analyse IA des prospects incluse</li>
+          <li>Dashboard temps réel complet</li>
+          <li>Formation et documentation complètes</li>
+          <li>Interlocuteur unique du diagnostic à la livraison</li>
+        </ul>
+        <a href="https://app.youform.com/forms/giq4ql5u" class="pack-cta pack-cta-filled">Demander un devis</a>
+        <p class="pack-cta-note" style="color:rgba(45,107,228,0.7)">Setup + maintenance mensuelle</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos" aria-labelledby="apropos-title">
+  <div class="container">
+    <div class="apropos-inner">
+      <div class="apropos-text">
+        <div class="section-tag">À propos</div>
+        <h2 class="section-title" id="apropos-title">25 ans d'expérience terrain au service de votre croissance</h2>
+        <p>J'ai créé AI Process Lab après avoir passé 25 ans à observer le même problème dans des entreprises de toutes tailles : des opportunités commerciales perdues non par manque de prospects, mais par manque de structure et de suivi.</p>
+        <p>Après 11 années de coordination de projets techniques au sein du Groupement des Mousquetaires et autant comme ingénieur commercial SaaS, j'ai développé un système complet d'automatisation du cycle commercial que je déploie désormais pour des TPE et PME qui veulent arrêter de perdre du chiffre d'affaires entre les étapes.</p>
+        <p>Vous parlez et échangez directement avec le fondateur. Pas d'intermédiaire qui gère votre projet.</p>
+        <div class="xp-grid">
+          <div class="xp-card"><div class="xp-value">25 ans</div><div class="xp-label">d'expérience commerciale et technique</div></div>
+          <div class="xp-card"><div class="xp-value">12</div><div class="xp-label">scénarios d'automatisation déployés</div></div>
+          <div class="xp-card"><div class="xp-value">2 semaines</div><div class="xp-label">délai de mise en place garanti</div></div>
+          <div class="xp-card"><div class="xp-value">FR · BE · CH · CA</div><div class="xp-label">Monde francophone</div></div>
+        </div>
+      </div>
+      <div class="apropos-visual">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6BE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="timeline-content">
+              <div class="timeline-period">11 ans</div>
+              <div class="timeline-title">Chef de projets · Intermarché· Groupement Mousquetaires</div>
+              <div class="timeline-desc">Pilotage d'installations techniques sur des points de vente à l'échelle nationale. Gestion de projets complexes et coordination multi-intervenants.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6BE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <div class="timeline-content">
+              <div class="timeline-period">10 ans</div>
+              <div class="timeline-title">Ingénieur commercial SaaS</div>
+              <div class="timeline-desc">Développement commercial d'un outil SaaS B2B pour l'identification de projets en amont des appels d'offres dans le secteur du bâtiment. Gestion et suivi portefeuilles clients.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6BE4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="timeline-content">
+              <div class="timeline-period">2025, aujourd'hui</div>
+              <div class="timeline-title">Fondateur · AI Process Lab</div>
+              <div class="timeline-desc">Création et déploiement d'un système complet d'automatisation du cycle commercial pour TPE et PME francophones.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-tag">Questions fréquentes</div>
+    <h2 class="section-title" id="faq-title">Ce que vous vous demandez avant de nous contacter</h2>
+    <div class="faq-grid" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Faut-il des compétences techniques pour utiliser le système ?
+          <div class="faq-chevron" aria-hidden="true">▾</div>
+        </button>
+        <div class="faq-answer" aria-hidden="true">Non. Le système est livré clé en main avec une formation incluse. Vos équipes utilisent une interface intuitive au quotidien. Aucune connaissance technique n'est requise.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Dois-je changer mes outils actuels ?
+          <div class="faq-chevron" aria-hidden="true">▾</div>
+        </button>
+        <div class="faq-answer" aria-hidden="true">Non. Je m'adapte à votre environnement existant. Le système se connecte à vos outils actuels (Gmail, Google Drive, votre outil de prise de RDV...) sans remplacer ce qui fonctionne déjà.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Combien de temps pour être opérationnel ?
+          <div class="faq-chevron" aria-hidden="true">▾</div>
+        </button>
+        <div class="faq-answer" aria-hidden="true">Moins de deux semaines entre le diagnostic et la mise en production. Le système est entièrement testé avant livraison. Vous n'avez pas à gérer une phase de débogage après la remise.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Que se passe-t-il si je veux arrêter ?
+          <div class="faq-chevron" aria-hidden="true">▾</div>
+        </button>
+        <div class="faq-answer" aria-hidden="true">Le système vous appartient entièrement. Vous pouvez arrêter la maintenance mensuelle à tout moment sans pénalité. Toutes vos données restent dans vos outils.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Puis-je commencer par un seul pack ?
+          <div class="faq-chevron" aria-hidden="true">▾</div>
+        </button>
+        <div class="faq-answer" aria-hidden="true">Absolument. Les packs Acquisition et Conversion sont indépendants. Vous pouvez commencer par l'Acquisition, valider les résultats, puis ajouter la Conversion. Le pack Pilotage réunit les deux en un système complet et cohérent.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Que couvre la maintenance mensuelle ?
+          <div class="faq-chevron" aria-hidden="true">▾</div>
+        </button>
+        <div class="faq-answer" aria-hidden="true">La maintenance couvre les corrections de bugs, les mises à jour des automatisations, les ajustements de votre base de données, et le support. C'est ce qui garantit que votre système reste opérationnel dans la durée.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="section-tag">Passez à l'action</div>
+    <h2 class="section-title" id="cta-title">Arrêtez de perdre des opportunités faute de suivi</h2>
+    <p class="section-subtitle">30 minutes pour analyser votre cycle commercial et identifier ce que vous perdez chaque mois.</p>
+    <div class="cta-box">
+      <div class="cta-features">
+        <div class="cta-feature"><span class="cta-feature-icon">✓</span> Diagnostic entièrement gratuit et sans engagement</div>
+        <div class="cta-feature"><span class="cta-feature-icon">✓</span> Analyse de votre cycle commercial actuel</div>
+        <div class="cta-feature"><span class="cta-feature-icon">✓</span> Estimation des opportunités perdues chaque mois</div>
+        <div class="cta-feature"><span class="cta-feature-icon">✓</span> Proposition concrète adaptée à votre activité</div>
+      </div>
+      <a href="https://app.youform.com/forms/giq4ql5u" class="cta-btn">Réserver mon diagnostic gratuit →</a>
+      <p class="cta-note">30 minutes · Sans engagement · Réponse sous 24h</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <a href="#" class="footer-logo" aria-label="AI Process Lab, Accueil">
+      <img src="logo.png" alt="AI Process Lab" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text" style="display:none">AI Process Lab</span>
+    </a>
+    <div class="footer-links">
+      <a href="mailto:yb@ai-process-lab.com">yb@ai-process-lab.com</a>
+      <a href="tel:+33769847221">07 69 84 72 21</a>
+      <a href="#" onclick="openModal('mentions-legales');return false;">Mentions légales</a>
+      <a href="#" onclick="openModal('politique-confidentialite');return false;">Politique de confidentialité</a>
+    </div>
+    <span class="footer-copy">© 2026 AI Process Lab · SIRET 99362812200018 · Paris</span>
+  </div>
 </footer>
 
-<!-- MODAL MENTIONS LEGALES -->
-
-<div id="legal" class="modal">
-<div class="modal-content">
-
-<span class="modal-close" onclick="closeModal('legal')">&times;</span>
-
-<h3>Mentions légales</h3>
-
-<p>
-<strong>Éditeur du site :</strong><br>
-AI Process LAB
-</p>
-
-<p>
-<strong>SIRET :</strong><br>
-99362812200018
-</p>
-
-<p>
-<strong>Adresse :</strong><br>
-1 rue Marguerin, 75014 Paris, France
-</p>
-
-<p>
-<strong>Email :</strong><br>
-<a href="mailto:yb@ai-process-lab.com">
-yb@ai-process-lab.com
-</a>
-</p>
-
-<p>
-<strong>Téléphone :</strong><br>
-<a href="tel:+33769847221">
-07 69 84 72 21
-</a>
-</p>
-
-<p>
-<strong>Nom de domaine :</strong><br>
-www.ai-process-lab.com
-</p>
-
-<p>
-<strong>Hébergement :</strong><br>
-GitHub Pages — GitHub, Inc.<br>
-88 Colin P Kelly Jr St,<br>
-San Francisco, CA 94107,<br>
-United States
-</p>
-
-<p>
-Ce site a pour objet de présenter les services proposés par AI Process LAB
-dans le domaine de la structuration commerciale, de l’organisation des process
-et de la fiabilisation du cycle commercial des PME.
-</p>
-
-<p>
-L’ensemble des contenus présents sur ce site
-(textes, éléments graphiques, logo, structure, design)
-sont protégés par le droit de la propriété intellectuelle.
-Toute reproduction, représentation ou diffusion,
-totale ou partielle, sans autorisation préalable,
-est interdite.
-</p>
-
-</div>
+<!-- MODAL MENTIONS LÉGALES -->
+<div class="modal-overlay" id="modal-mentions-legales" role="dialog" aria-modal="true" aria-labelledby="modal-ml-title">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('mentions-legales')" aria-label="Fermer">✕</button>
+    <h3 id="modal-ml-title">Mentions légales</h3>
+    <h4>Éditeur du site</h4>
+    <p>AI Process Lab<br>
+    SIRET : 99362812200018<br>
+    Adresse : 1 rue Marguerin, 75014 Paris, France<br>
+    Email : yb@ai-process-lab.com<br>
+    Téléphone : 07 69 84 72 21<br>
+    Responsable de la publication : Yacine B.</p>
+    <h4>Hébergement</h4>
+    <p>GitHub Pages, GitHub, Inc.<br>88 Colin P Kelly Jr St, San Francisco, CA 94107, United States</p>
+    <h4>Propriété intellectuelle</h4>
+    <p>L'ensemble des contenus présents sur ce site (textes, éléments graphiques, logo, structure, design) sont protégés par le droit de la propriété intellectuelle. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation préalable écrite d'AI Process Lab, est interdite.</p>
+    <h4>Limitation de responsabilité</h4>
+    <p>AI Process Lab s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, AI Process Lab ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition et décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur ce site.</p>
+  </div>
 </div>
 
-<!-- MODAL POLITIQUE CONFIDENTIALITE -->
-
-<div id="privacy" class="modal">
-<div class="modal-content">
-
-<span class="modal-close" onclick="closeModal('privacy')">&times;</span>
-
-<h3>Politique de confidentialité</h3>
-
-<p>
-AI Process LAB attache une importance particulière
-à la protection des données personnelles.
-</p>
-
-<p>
-Les informations éventuellement collectées via le formulaire de contact (nom, prénom, email, téléphone, informations communiquées volontairement)
-sont utilisées uniquement dans le cadre
-des échanges commerciaux et du traitement des demandes.
-</p>
-
-<p>
-Les données ne sont ni vendues,
-ni cédées,
-ni transmises à des tiers à des fins commerciales.
-</p>
-
-<p>
-Le formulaire de contact présent sur ce site est opéré via la plateforme YouForm.
-</p>
-
-<p>
-Pour plus d’informations concernant le traitement des données par YouForm,
-vous pouvez consulter leur politique de confidentialité :
-</p>
-
-<p>
-<a href="https://youform.com/privacy"
-target="_blank"
-rel="noopener noreferrer">
-https://youform.com/privacy
-</a>
-</p>
-
-<p>
-Les données sont conservées uniquement pendant la durée nécessaire
-au traitement des échanges et des demandes commerciales.
-</p>
-
-<p>
-Conformément au Règlement Général sur la Protection des Données (RGPD),
-vous disposez :
-</p>
-
-<p>
-• d’un droit d’accès<br>
-• d’un droit de rectification<br>
-• d’un droit de suppression<br>
-• d’un droit d’opposition au traitement de vos données
-</p>
-
-<p>
-Pour toute demande relative à vos données personnelles,
-vous pouvez contacter la personne responsable par mail :
-</p>
-
-<p>
-<a href="mailto:yb@ai-process-lab.com">
-yb@ai-process-lab.com
-</a>
-</p>
-
-<p>
-Ce site ne vend pas de données personnelles
-et n’utilise pas de système publicitaire tiers.
-</p>
-
+<!-- MODAL POLITIQUE DE CONFIDENTIALITÉ -->
+<div class="modal-overlay" id="modal-politique-confidentialite" role="dialog" aria-modal="true" aria-labelledby="modal-pc-title">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('politique-confidentialite')" aria-label="Fermer">✕</button>
+    <h3 id="modal-pc-title">Politique de confidentialité</h3>
+    <p>AI Process Lab attache une importance particulière à la protection des données personnelles de ses visiteurs et clients.</p>
+    <h4>Données collectées</h4>
+    <p>Les informations éventuellement collectées via le formulaire de contact (nom, prénom, email, téléphone, informations communiquées volontairement) sont utilisées uniquement dans le cadre des échanges commerciaux et du traitement des demandes.</p>
+    <h4>Utilisation des données</h4>
+    <p>Les données collectées sont utilisées pour répondre à vos demandes, vous envoyer des informations relatives à nos services et assurer le suivi commercial. Les données ne sont ni vendues, ni cédées, ni transmises à des tiers à des fins commerciales.</p>
+    <h4>Formulaire de contact</h4>
+    <p>Le formulaire de contact présent sur ce site est opéré via la plateforme YouForm. Pour plus d'informations concernant le traitement des données par YouForm, vous pouvez consulter leur politique de confidentialité : youform.com/privacy</p>
+    <h4>Durée de conservation</h4>
+    <p>Les données sont conservées uniquement pendant la durée nécessaire au traitement des échanges et des demandes commerciales, et ne sont pas conservées au-delà de 3 ans sans nouvelle interaction.</p>
+    <h4>Vos droits (RGPD)</h4>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+    <ul>
+      <li>Droit d'accès à vos données personnelles</li>
+      <li>Droit de rectification des données inexactes</li>
+      <li>Droit à l'effacement (droit à l'oubli)</li>
+      <li>Droit d'opposition au traitement</li>
+      <li>Droit à la portabilité des données</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez : yb@ai-process-lab.com</p>
+    <h4>Cookies</h4>
+    <p>Ce site n'utilise pas de cookies de tracking ou publicitaires. Aucune donnée de navigation n'est collectée à des fins commerciales.</p>
+  </div>
 </div>
-</div>
-
-<!-- AJOUTE CE SCRIPT JUSTE AVANT </body> -->
 
 <script>
-
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-menuToggle.addEventListener('click', () => {
-mobileMenu.classList.toggle('mobile-menu-active');
-});
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-link.addEventListener('click', () => {
-mobileMenu.classList.remove('mobile-menu-active');
-});
-});
-
-/* MODALS */
-
-function openModal(id){
-document.getElementById(id).style.display = 'flex';
-document.body.style.overflow = 'hidden';
+// FAQ
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    i.querySelector('.faq-answer').setAttribute('aria-hidden', 'true');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    item.querySelector('.faq-answer').setAttribute('aria-hidden', 'false');
+  }
 }
 
-function closeModal(id){
-document.getElementById(id).style.display = 'none';
-document.body.style.overflow = 'auto';
+// Modals
+function openModal(id) {
+  const overlay = document.getElementById('modal-' + id);
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  overlay.querySelector('.modal-close').focus();
 }
 
-window.addEventListener('click', function(e){
-
-const legalModal = document.getElementById('legal');
-const privacyModal = document.getElementById('privacy');
-
-if(e.target === legalModal){
-closeModal('legal');
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('active');
+  document.body.style.overflow = '';
 }
 
-if(e.target === privacyModal){
-closeModal('privacy');
-}
-
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 });
 
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(overlay => {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    if (navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+
+// Mobile nav
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+navToggle.addEventListener('click', function() {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen.toString());
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+// Close nav on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function() {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+// Smooth scroll with offset for fixed nav
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
 </script>
 </body>
 </html>
