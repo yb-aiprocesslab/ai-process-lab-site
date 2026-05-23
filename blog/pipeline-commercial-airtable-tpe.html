@@ -36,7 +36,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgb
 .nav-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
 .nav-links a:hover { color: var(--navy); }
 .nav-cta { background: var(--blue) !important; color: white !important; padding: 9px 18px; border-radius: 8px; font-weight: 500 !important; }
-.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; margin-left: auto; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
 .article-wrapper { max-width: 740px; margin: 0 auto; padding: 110px 5% 80px; }
 .article-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
@@ -85,7 +85,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgb
 footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
 .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.footer-logo-img { height: 28px; filter: brightness(0) invert(1); opacity: 0.7; }
+.footer-logo-img { height: 28px; opacity: 0.85; }
 .footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); }
 .footer-links { display: flex; gap: 20px; }
 .footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
@@ -140,7 +140,7 @@ footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
     <table class="compare-mini">
       <thead><tr><th>Critère</th><th>Excel / Google Sheets</th><th>CRM classique</th><th>Airtable sur mesure</th></tr></thead>
       <tbody>
-        <tr><td>Coût mensuel</td><td>Gratuit</td><td>50 à 150 € / mois/ utilisateur</td><td class="check">Moins de 20 € / équipe</td></tr>
+        <tr><td>Coût mensuel</td><td>Gratuit</td><td>50 à 150 €/utilisateur</td><td class="check">Moins de 20 € / équipe</td></tr>
         <tr><td>Délai de configuration</td><td>Immédiat</td><td>Plusieurs semaines</td><td class="check">2 à 5 jours</td></tr>
         <tr><td>Relances automatiques</td><td class="cross">Non</td><td>Partiel selon offre</td><td class="check">Oui via Make</td></tr>
         <tr><td>Adapté à vos process</td><td class="cross">Limité</td><td class="cross">Vous vous adaptez à l'outil</td><td class="check">L'outil s'adapte à vous</td></tr>
@@ -151,7 +151,7 @@ footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
 
     <h2>La structure d'un pipeline commercial Airtable efficace</h2>
 
-    <p>Un pipeline commercial sur Airtable repose sur des tables relationnelles, des feuilles liées entre elles, plutôt qu'une centralisation dans un ou plusieurs onglets. C'est ce qui permet d'avoir une vue complète sur chaque client, de la première demande à la dernière facture.</p>
+    <p>Un pipeline commercial sur Airtable repose sur des tables relationnelles, des feuilles liées entre elles, plutôt que sur tout mettre dans un seul onglet. C'est ce qui permet d'avoir une vue complète sur chaque client, de la première demande à la dernière facture.</p>
 
     <h3>Les 4 tables essentielles</h3>
 
@@ -162,7 +162,7 @@ footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
       <li><strong>Factures</strong>, chaque facture émise, reliée au devis validé</li>
     </ul>
 
-    <p>Cette structure vous permet de remonter l'historique complet d'un client en un clic : toutes ses demandes, tous ses devis, toutes ses factures. Aucun CRM à 100€/mois/utilisateur ne fait mieux pour votre besoin.</p>
+    <p>Cette structure vous permet de remonter l'historique complet d'un client en un clic : toutes ses demandes, tous ses devis, toutes ses factures. Aucun CRM à 100€/mois ne fait mieux pour votre besoin.</p>
 
     <h3>Les champs clés dans la table Demandes</h3>
 
