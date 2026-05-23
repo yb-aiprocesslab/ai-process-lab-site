@@ -39,7 +39,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgb
 .nav-cta { background: var(--blue) !important; color: white !important; padding: 9px 18px; border-radius: 8px; font-weight: 500 !important; }
 .nav-cta:hover { background: var(--blue-hover) !important; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; margin-left: auto; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
 .article-wrapper { max-width: 740px; margin: 0 auto; padding: 110px 5% 80px; }
 .article-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
 .article-breadcrumb a { color: var(--text-muted); text-decoration: none; }
@@ -90,6 +90,93 @@ footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
 @media (max-width: 900px) { .nav-links { display: none; } .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--white); padding: 32px 5%; gap: 24px; align-items: flex-start; border-top: 1px solid var(--border); z-index: 999; } .nav-links.open a { font-size: 18px; color: var(--navy); } .nav-toggle { display: flex; } .stat-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 500px) { .stat-grid { grid-template-columns: 1fr; } .article-cta { padding: 28px 24px; } .footer-inner { flex-direction: column; align-items: flex-start; } }
+/* ========== MOBILE MENU OVERLAY ========== */
+#mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--navy);
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+#mobile-menu-overlay.active {
+  display: flex;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  height: 68px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.mobile-menu-logo-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.mobile-menu-close {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.1);
+  border: none; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: white; font-size: 20px;
+  font-weight: 300;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.mobile-menu-close:hover { background: rgba(255,255,255,0.2); }
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 6% 32px;
+  gap: 0;
+  flex: 1;
+}
+
+.mobile-menu-links a {
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: color 0.2s;
+}
+
+.mobile-menu-links a:hover { color: #7EB3FF; }
+
+.mobile-menu-links a:last-child { border-bottom: none; }
+
+.mobile-menu-cta {
+  margin: 24px 6%;
+  display: block;
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 18px 24px;
+  border-radius: 12px;
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(45,107,228,0.4);
+}
+
 </style>
 </head>
 <body>
@@ -250,13 +337,53 @@ footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
     <span class="footer-copy">© 2026 AI Process Lab</span>
   </div>
 </footer>
+<!-- MOBILE MENU OVERLAY -->
+<div id="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <div class="mobile-menu-header">
+    <span class="mobile-menu-logo-text">AI Process Lab</span>
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fermer le menu">✕</button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="../index.html#probleme" class="mobile-nav-link">Pourquoi ?</a>
+    <a href="../index.html#solution" class="mobile-nav-link">Services</a>
+    <a href="../index.html#tarifs" class="mobile-nav-link">Offres</a>
+    <a href="../index.html#apropos" class="mobile-nav-link">À propos</a>
+    <a href="../blog.html" class="mobile-nav-link">Blog</a>
+  </div>
+  <a href="https://app.youform.com/forms/giq4ql5u" class="mobile-menu-cta">Réserver mon diagnostic gratuit →</a>
+</div>
 <script>
-const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.getElementById('nav-links');
+var navToggle = document.getElementById('nav-toggle');
+var mobileOverlay = document.getElementById('mobile-menu-overlay');
+var mobileClose = document.getElementById('mobile-menu-close');
+
+function closeNav() {
+  if (mobileOverlay) mobileOverlay.classList.remove('active');
+  navToggle.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
 navToggle.addEventListener('click', function() {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen.toString());
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  var isOpen = !mobileOverlay.classList.contains('active');
+  if (isOpen) {
+    mobileOverlay.classList.add('active');
+    navToggle.classList.add('is-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  } else {
+    closeNav();
+  }
+});
+
+if (mobileClose) { mobileClose.addEventListener('click', closeNav); }
+
+document.querySelectorAll('.mobile-nav-link, .mobile-menu-cta').forEach(function(link) {
+  link.addEventListener('click', function() { closeNav(); });
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeNav(); }
 });
 </script>
 </body>
