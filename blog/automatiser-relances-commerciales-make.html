@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatiser ses relances de devis avec Make : guide pratique | AI Process Lab</title>
+<meta name="description" content="Comment ne plus jamais oublier de relancer un devis. Guide pratique pour automatiser vos relances commerciales avec Make et ne perdre aucune opportunité.">
+<meta name="keywords" content="automatiser relances devis Make, relance automatique prospect, suivi devis automatique TPE PME, Make automatisation commerciale, relance client automatique">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ai-process-lab.com/blog/automatiser-relances-commerciales-make.html">
+<meta property="og:title" content="Automatiser ses relances de devis avec Make : guide pratique">
+<meta property="og:description" content="Comment ne plus jamais oublier de relancer un devis. Guide pratique pour automatiser vos relances commerciales.">
+<meta property="og:url" content="https://www.ai-process-lab.com/blog/automatiser-relances-commerciales-make.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ai-process-lab.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Automatiser ses relances de devis avec Make : guide pratique","description":"Comment ne plus jamais oublier de relancer un devis grâce à Make.","author":{"@type":"Person","name":"Yacine B."},"publisher":{"@type":"Organization","name":"AI Process Lab","url":"https://www.ai-process-lab.com"},"datePublished":"2026-05-01","dateModified":"2026-05-23","keywords":"automatiser relances devis, Make, suivi commercial automatique, TPE PME"}
+</script>
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #0D2B4E; --blue: #2D6BE4; --blue-hover: #1a57d4; --blue-light: #E8F0FD; --bg: #F8F9FB; --bg-alt: #F1F4F8; --white: #FFFFFF; --text: #1A2B3C; --text-muted: #6B7A8D; --border: #E2E8F0; --shadow: 0 1px 3px rgba(13,43,78,0.06), 0 4px 16px rgba(13,43,78,0.08); --radius: 12px; --transition: 0.2s ease; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+h1,h2,h3,h4 { font-family: 'Sora', sans-serif; color: var(--navy); line-height: 1.25; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(248,249,251,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); height: 68px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.nav-logo-img { height: 34px; width: auto; }
+.nav-logo-fallback { width: 32px; height: 32px; background: var(--navy); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 12px; color: white; }
+.nav-logo-text { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+.nav-links a:hover { color: var(--navy); }
+.nav-cta { background: var(--blue) !important; color: white !important; padding: 9px 18px; border-radius: 8px; font-weight: 500 !important; }
+.nav-cta:hover { background: var(--blue-hover) !important; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; }
+.article-wrapper { max-width: 740px; margin: 0 auto; padding: 110px 5% 80px; }
+.article-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
+.article-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.article-breadcrumb a:hover { color: var(--blue); }
+.article-breadcrumb span { color: var(--border); }
+.article-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-light); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+.article-title { font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
+.article-meta-bar { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 40px; flex-wrap: wrap; }
+.article-meta-bar strong { color: var(--navy); }
+.article-content { font-size: 16px; line-height: 1.85; color: var(--text); }
+.article-content p { margin-bottom: 20px; }
+.article-content h2 { font-size: clamp(20px, 2.5vw, 26px); font-weight: 700; color: var(--navy); margin: 44px 0 16px; }
+.article-content h3 { font-size: 18px; font-weight: 600; color: var(--navy); margin: 28px 0 12px; }
+.article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 20px; }
+.article-content li { margin-bottom: 8px; }
+.article-content strong { color: var(--navy); font-weight: 600; }
+.callout { background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; margin: 28px 0; font-size: 15px; color: var(--navy); }
+.callout strong { color: var(--blue); display: block; margin-bottom: 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
+.stat-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+.stat-value { font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; color: var(--blue); }
+.stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.step-block { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin: 16px 0; display: flex; gap: 16px; align-items: flex-start; }
+.step-num { width: 32px; height: 32px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 14px; color: white; flex-shrink: 0; }
+.step-content h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.step-content p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin: 0; }
+.related-articles { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-top: 48px; }
+.related-articles h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px; }
+.related-link { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); transition: color var(--transition); }
+.related-link:last-child { border-bottom: none; padding-bottom: 0; }
+.related-link:hover { color: var(--blue); text-decoration: none; }
+.related-link-arrow { color: var(--blue); font-size: 18px; flex-shrink: 0; }
+.related-link-text { font-size: 14px; font-weight: 500; }
+.article-cta { background: var(--navy); border-radius: 16px; padding: 36px 40px; margin: 48px 0 0; text-align: center; }
+.article-cta h3 { font-size: 22px; color: white; margin-bottom: 10px; }
+.article-cta p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+.article-cta a { display: inline-block; background: var(--blue); color: white; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all var(--transition); box-shadow: 0 4px 14px rgba(45,107,228,0.3); }
+.article-cta a:hover { background: var(--blue-hover); transform: translateY(-2px); }
+.back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 14px; text-decoration: none; margin-top: 40px; transition: color var(--transition); }
+.back-link:hover { color: var(--blue); text-decoration: none; }
+footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-logo-img { height: 28px; filter: brightness(0) invert(1); opacity: 0.7; }
+.footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+@media (max-width: 900px) { .nav-links { display: none; } .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--white); padding: 32px 5%; gap: 24px; align-items: flex-start; border-top: 1px solid var(--border); z-index: 999; } .nav-links.open a { font-size: 18px; color: var(--navy); } .nav-toggle { display: flex; } .stat-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .stat-grid { grid-template-columns: 1fr; } .article-cta { padding: 28px 24px; } .footer-inner { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo.png" alt="AI Process Lab" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">AI</div>
+    <span class="nav-logo-text">AI Process Lab</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html#solution">Services</a></li>
+    <li><a href="../index.html#tarifs">Offres</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="https://app.youform.com/forms/giq4ql5u" class="nav-cta">Diagnostic gratuit</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="article-wrapper">
+  <div class="article-breadcrumb">
+    <a href="../index.html">Accueil</a><span>/</span>
+    <a href="../blog.html">Blog</a><span>/</span>
+    Automatiser ses relances avec Make
+  </div>
+
+  <div class="article-tag">Make · Automatisation commerciale</div>
+  <h1 class="article-title">Votre devis envoyé il y a 15 jours n'a pas eu de réponse. Et maintenant ?</h1>
+  <div class="article-meta-bar">
+    <span>Par <strong>Yacine B.</strong></span>
+    <span>8 min de lecture</span>
+    <span>Relances · Make · Suivi commercial</span>
+  </div>
+
+  <div class="article-content">
+
+    <p>Vous avez envoyé un devis la semaine dernière. Pas de réponse. Vous vous dites que vous relancerez dans quelques jours. Puis une réunion, un client urgent, un autre dossier, et le devis disparaît de votre radar. Deux semaines plus tard, le prospect a signé avec quelqu'un d'autre.</p>
+
+    <p>Ce scénario, la plupart des dirigeant(e)s de TPE et PME le vivent plusieurs fois par mois sans même s'en rendre compte. Non par manque de volonté, mais parce que le suivi de devis repose sur la mémoire et la disponibilité, deux ressources qui font défaut quand l'activité est chargée.</p>
+
+    <p>La solution n'est pas de travailler plus. C'est de mettre en place un système qui relance à votre place, au bon moment, sans que vous ayez à y penser.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">80%</div><div class="stat-label">des ventes nécessitent au moins 5 contacts avant signature</div></div>
+      <div class="stat-card"><div class="stat-value">44%</div><div class="stat-label">des commerciaux abandonnent après un seul contact sans réponse</div></div>
+      <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">devis oublié avec un système automatisé bien configuré</div></div>
+    </div>
+
+    <h2>Pourquoi la relance manuelle ne fonctionne pas durablement</h2>
+
+    <p>Le problème n'est pas comportemental. Un(e) dirigeant(e) ou commercial(e) qui oublie de relancer un devis n'est pas négligent, il/elle est occupé(e) à faire tourner son activité. La relance manuelle échoue parce qu'elle demande une décision active à chaque fois : se souvenir du devis, évaluer si c'est le bon moment, rédiger un message adapté, l'envoyer. Multipliez ça par 10 devis en cours et vous comprenez pourquoi les relances passent à la trappe.</p>
+
+    <p>Il y a aussi un frein psychologique que beaucoup de dirigeant(e)s reconnaissent : relancer quelqu'un qui n'a pas répondu semble gênant. On se dit "je ne veux pas déranger", alors qu'un message de relance bien formulé est perçu comme professionnel et attentionné.</p>
+
+    <div class="callout">
+      <strong>Principe clé</strong>
+      Un système automatisé n'a pas d'ego. Il envoie le bon message au bon moment, sans hésitation, sans gêne, sans oubli. C'est ça la vraie valeur de l'automatisation des relances.
+    </div>
+
+    <h2>Comment automatiser ses relances de devis avec Make</h2>
+
+    <p>Make est un outil d'automatisation qui permet de connecter vos applications entre elles et de déclencher des actions selon des conditions précises. Pour les relances commerciales, il s'appuie sur Airtable comme base de données centrale et Gmail pour l'envoi des messages.</p>
+
+    <h3>L'architecture du système en 4 blocs</h3>
+
+    <div class="step-block">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Un déclencheur planifié quotidien</h4>
+        <p>Chaque matin, Make se lance automatiquement et interroge votre base Airtable. Aucune intervention manuelle requise, le système fonctionne même quand vous êtes en réunion, en déplacement ou en week-end.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>La recherche des devis à relancer</h4>
+        <p>Make filtre votre base Airtable pour identifier les devis en statut "Envoyé" depuis exactement 4 jours sans réponse. Ce filtre est entièrement paramétrable selon vos délais habituels.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>L'envoi du mail de relance personnalisé</h4>
+        <p>Pour chaque devis identifié, Make envoie depuis votre boîte Gmail un message personnalisé avec le nom du prospect, la référence du devis et un ton adapté. Le mail vient de vous, pas d'un robot, le prospect ne voit aucune différence.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>La mise à jour automatique du statut</h4>
+        <p>Après chaque envoi, Airtable est mis à jour : le statut passe à "Relancé 1" et la date de relance est enregistrée. Le lendemain, le système ne retraitera pas ce devis, il attendra le délai configuré pour la deuxième relance.</p>
+      </div>
+    </div>
+
+    <h3>La deuxième relance : un message différent</h3>
+
+    <p>Si après la première relance le prospect ne répond toujours pas, un second scénario prend le relais quelques jours plus tard. Le message est différent dans le ton : plus direct, avec une question ouverte qui invite à une réponse même négative. "Votre projet est-il toujours d'actualité ?" vaut mieux que le silence.</p>
+
+    <p>Passé deux relances sans réponse, le dossier est classé automatiquement et votre pipeline reste propre. Vous ne perdez plus de temps sur des opportunités qui ne se concrétiseront pas.</p>
+
+    <h2>Le même principe pour les relances de factures impayées</h2>
+
+    <p>Une fois le cycle de devis maîtrisé, la même logique s'applique aux factures impayées. Make surveille les factures dont l'échéance est dépassée et déclenche des relances progressives : un rappel courtois à J+3, un message plus ferme à J+10, un dernier avertissement à J+20. Tout est paramétrable selon votre secteur et vos habitudes.</p>
+
+    <div class="callout">
+      <strong>À retenir</strong>
+      La qualité de vos mails de relance est aussi importante que le système qui les envoie. Un message court, personnalisé, avec une seule question claire aura toujours de meilleurs résultats qu'un long texte générique.
+    </div>
+
+    <h2>Ce que ce système ne remplace pas</h2>
+
+    <p>L'automatisation des relances prend en charge le volume et la régularité. Elle ne remplace pas la relation commerciale humaine. Si un prospect ne répond pas après deux relances, c'est souvent le signal qu'un appel téléphonique ou une action plus personnalisée est nécessaire.</p>
+
+    <p>Le système s'occupe des 80% de situations standards. Vous gérez les 20% qui méritent une attention particulière.</p>
+
+    <h2>Conclusion</h2>
+
+    <p>Automatiser ses relances de devis avec Make est l'une des actions les plus efficaces à mettre en place et les plus visibles en termes de résultats. Chaque devis envoyé est désormais suivi jusqu'à une réponse, sans que vous ayez à vous en souvenir.</p>
+
+    <p>Si vous voulez voir comment ce système s'intègre dans un cycle commercial complet, de la capture du lead à la facturation, le diagnostic gratuit est le bon point de départ.</p>
+
+  </div>
+
+  <div class="related-articles">
+    <h3>Articles qui pourraient vous intéresser</h3>
+    <a href="pipeline-commercial-airtable-tpe.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Vous gérez vos prospects sur Excel. Voici ce que ça vous coûte vraiment.</span>
+    </a>
+    <a href="cout-assistant-commercial-vs-automatisation.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Avant de recruter un assistant commercial ou ADV, lisez ça.</span>
+    </a>
+  </div>
+
+  <a href="../blog.html" class="back-link">← Retour au blog</a>
+
+  <div class="article-cta">
+    <h3>Vous voulez mettre ce système en place ?</h3>
+    <p>30 minutes pour analyser votre situation et vous montrer concrètement ce que ça donnerait pour votre activité.</p>
+    <a href="https://app.youform.com/forms/giq4ql5u">Réserver mon diagnostic gratuit →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../index.html" class="footer-logo">
+      <img src="../logo.png" alt="AI Process Lab" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text" style="display:none">AI Process Lab</span>
+    </a>
+    <div class="footer-links">
+      <a href="../index.html">Accueil</a>
+      <a href="../blog.html">Blog</a>
+      <a href="mailto:yb@ai-process-lab.com">Contact</a>
+    </div>
+    <span class="footer-copy">© 2026 AI Process Lab</span>
+  </div>
+</footer>
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+navToggle.addEventListener('click', function() {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen.toString());
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+</script>
+</body>
+</html>
