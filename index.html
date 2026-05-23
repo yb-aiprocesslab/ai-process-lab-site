@@ -1162,7 +1162,7 @@ footer {
         </div>
       </div>
     </div>
-    <div class="hero-dashboard-wrap" aria-label="Aperçu du dashboard AI Process Lab — cliquez pour agrandir" onclick="openDashboard()" title="Cliquer pour agrandir">
+    <div class="hero-dashboard-wrap" aria-label="Aperçu du dashboard AI Process Lab — cliquez pour agrandir" onclick="openDashboard()" title="Cliquer pour agrandir" role="button" tabindex="0">
       <div class="hero-dashboard-inner">
         <img
           src="dashboard-preview.png"
@@ -1714,8 +1714,8 @@ footer {
     <div class="footer-links">
       <a href="mailto:yb@ai-process-lab.com">yb@ai-process-lab.com</a>
       <a href="tel:+33769847221">07 69 84 72 21</a>
-      <a href="#" onclick="openModal('mentions-legales');return false;">Mentions légales</a>
-      <a href="#" onclick="openModal('politique-confidentialite');return false;">Politique de confidentialité</a>
+      <a href="javascript:void(0)" onclick="openModal('mentions-legales')">Mentions légales</a>
+      <a href="javascript:void(0)" onclick="openModal('politique-confidentialite')">Politique de confidentialité</a>
     </div>
     <span class="footer-copy">© 2026 AI Process Lab · SIRET 99362812200018 · Paris</span>
   </div>
@@ -1771,10 +1771,8 @@ footer {
   </div>
 </div>
 
-<script>
-
 <!-- DASHBOARD LIGHTBOX -->
-<div class="dashboard-lightbox-overlay" id="dashboard-lightbox" onclick="closeDashboard(event)">
+<div class="dashboard-lightbox-overlay" id="dashboard-lightbox" style="display:none;">
   <div class="dashboard-lightbox-inner">
     <button class="dashboard-lightbox-close" onclick="closeDashboardBtn()" aria-label="Fermer">✕</button>
     <img src="dashboard-preview.png" alt="Dashboard AI Process Lab" class="dashboard-lightbox-img">
@@ -1783,11 +1781,11 @@ footer {
 </div>
 
 <script>
-// FAQ
+// ========== FAQ ==========
 function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) {
     i.classList.remove('open');
     i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
     i.querySelector('.faq-answer').setAttribute('aria-hidden', 'true');
@@ -1799,20 +1797,22 @@ function toggleFaq(btn) {
   }
 }
 
-// Modals
+// ========== MODALS LÉGALES ==========
 function openModal(id) {
-  const overlay = document.getElementById('modal-' + id);
+  var overlay = document.getElementById('modal-' + id);
+  if (!overlay) return;
   overlay.classList.add('active');
   document.body.style.overflow = 'hidden';
-  overlay.querySelector('.modal-close').focus();
 }
 
 function closeModal(id) {
-  document.getElementById('modal-' + id).classList.remove('active');
+  var overlay = document.getElementById('modal-' + id);
+  if (!overlay) return;
+  overlay.classList.remove('active');
   document.body.style.overflow = '';
 }
 
-document.querySelectorAll('.modal-overlay').forEach(overlay => {
+document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
   overlay.addEventListener('click', function(e) {
     if (e.target === overlay) {
       overlay.classList.remove('active');
@@ -1821,77 +1821,96 @@ document.querySelectorAll('.modal-overlay').forEach(overlay => {
   });
 });
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.active').forEach(overlay => {
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-    if (navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
-  }
-});
-
-
-// Dashboard lightbox
+// ========== DASHBOARD LIGHTBOX ==========
 function openDashboard() {
-  document.getElementById('dashboard-lightbox').classList.add('active');
+  var lb = document.getElementById('dashboard-lightbox');
+  if (!lb) return;
+  lb.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
 
 function closeDashboardBtn() {
-  document.getElementById('dashboard-lightbox').classList.remove('active');
+  var lb = document.getElementById('dashboard-lightbox');
+  if (!lb) return;
+  lb.style.display = 'none';
   document.body.style.overflow = '';
 }
 
-function closeDashboard(e) {
-  if (e.target === document.getElementById('dashboard-lightbox')) {
-    document.getElementById('dashboard-lightbox').classList.remove('active');
-    document.body.style.overflow = '';
+document.addEventListener('DOMContentLoaded', function() {
+  var lb = document.getElementById('dashboard-lightbox');
+  if (lb) {
+    lb.addEventListener('click', function(e) {
+      if (e.target === lb) {
+        lb.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
   }
-}
+});
 
+// ========== MOBILE NAV ==========
+document.addEventListener('DOMContentLoaded', function() {
+  var navToggle = document.getElementById('nav-toggle');
+  var navLinks = document.getElementById('nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ========== SMOOTH SCROLL ==========
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        var offset = 80;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+});
+
+// ========== ESCAPE KEY ==========
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    document.getElementById('dashboard-lightbox').classList.remove('active');
+  if (e.key !== 'Escape') return;
+
+  // Fermer modals légales
+  document.querySelectorAll('.modal-overlay.active').forEach(function(overlay) {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  // Fermer dashboard lightbox
+  var lb = document.getElementById('dashboard-lightbox');
+  if (lb) {
+    lb.style.display = 'none';
     document.body.style.overflow = '';
   }
-});
 
-// Mobile nav
-const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.getElementById('nav-links');
-
-navToggle.addEventListener('click', function() {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen.toString());
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-});
-
-// Close nav on link click
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function() {
+  // Fermer menu mobile
+  var navLinks = document.getElementById('nav-links');
+  var navToggle = document.getElementById('nav-toggle');
+  if (navLinks && navLinks.classList.contains('open')) {
     navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-  });
-});
-
-// Smooth scroll with offset for fixed nav
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href === '#') return;
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
+  }
 });
 </script>
 </body>
