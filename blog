@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog, Automatisation commerciale TPE PME | AI Process Lab</title>
+<meta name="description" content="Conseils pratiques pour automatiser votre cycle commercial : Make, Airtable, relances, devis, facturation. Par AI Process Lab.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ai-process-lab.com/blog.html">
+<meta property="og:title" content="Blog AI Process Lab, Automatisation commerciale">
+<meta property="og:description" content="Conseils pratiques pour automatiser votre cycle commercial avec Make et Airtable.">
+<meta property="og:url" content="https://www.ai-process-lab.com/blog.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0D2B4E;
+  --blue: #2D6BE4;
+  --blue-hover: #1a57d4;
+  --blue-light: #E8F0FD;
+  --bg: #F8F9FB;
+  --bg-alt: #F1F4F8;
+  --white: #FFFFFF;
+  --text: #1A2B3C;
+  --text-muted: #6B7A8D;
+  --border: #E2E8F0;
+  --shadow: 0 1px 3px rgba(13,43,78,0.06), 0 4px 16px rgba(13,43,78,0.08);
+  --radius: 12px;
+  --transition: 0.2s ease;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+h1,h2,h3,h4 { font-family: 'Sora', sans-serif; color: var(--navy); line-height: 1.2; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(248,249,251,0.94); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  height: 68px; padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo-img { height: 34px; width: auto; }
+.nav-logo-fallback { width: 32px; height: 32px; background: var(--navy); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 12px; color: white; }
+.nav-logo-text { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 14px; color: var(--text-muted); transition: color var(--transition); }
+.nav-links a:hover { color: var(--navy); }
+.nav-links a.active { color: var(--blue); font-weight: 500; }
+.nav-cta { background: var(--blue) !important; color: white !important; padding: 9px 18px; border-radius: 8px; font-weight: 500 !important; transition: background var(--transition) !important; }
+.nav-cta:hover { background: var(--blue-hover) !important; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all var(--transition); }
+
+/* HERO BLOG */
+.blog-hero {
+  padding: 120px 5% 64px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.blog-hero-inner { max-width: 760px; margin: 0 auto; }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--blue-light); color: var(--blue);
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 20px; margin-bottom: 14px;
+}
+.blog-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--navy); margin-bottom: 14px; }
+.blog-hero p { font-size: 17px; color: var(--text-muted); line-height: 1.75; max-width: 560px; }
+
+/* ARTICLES GRID */
+.blog-main { padding: 64px 5%; max-width: 1100px; margin: 0 auto; }
+
+.articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.article-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+  display: flex; flex-direction: column;
+}
+.article-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+
+.article-card-top {
+  background: var(--navy);
+  padding: 28px 24px;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 130px;
+}
+
+.article-icon {
+  width: 56px; height: 56px;
+  background: rgba(45,107,228,0.2);
+  border: 1px solid rgba(45,107,228,0.3);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.article-icon svg { width: 26px; height: 26px; stroke: #7EB3FF; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.article-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.article-tag {
+  display: inline-block;
+  background: var(--blue-light); color: var(--blue);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+  padding: 3px 10px; border-radius: 10px; margin-bottom: 12px;
+}
+.article-title { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 10px; line-height: 1.35; }
+.article-excerpt { font-size: 14px; color: var(--text-muted); line-height: 1.7; flex: 1; margin-bottom: 20px; }
+.article-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 14px; }
+.article-read { color: var(--blue); font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px; transition: gap var(--transition); }
+.article-card:hover .article-read { gap: 8px; }
+
+/* CTA BLOG */
+.blog-cta {
+  background: var(--navy); margin: 0 5% 64px;
+  border-radius: 16px; padding: 40px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.blog-cta-text h3 { font-size: 22px; color: white; margin-bottom: 6px; }
+.blog-cta-text p { font-size: 14px; color: rgba(255,255,255,0.6); }
+.blog-cta-btn {
+  background: var(--blue); color: white;
+  padding: 13px 24px; border-radius: 10px;
+  font-size: 14px; font-weight: 600;
+  white-space: nowrap;
+  transition: all var(--transition);
+  box-shadow: 0 4px 14px rgba(45,107,228,0.3);
+}
+.blog-cta-btn:hover { background: var(--blue-hover); transform: translateY(-1px); }
+
+/* FOOTER */
+footer { background: var(--navy); padding: 32px 5%; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; }
+.footer-logo-img { height: 28px; filter: brightness(0) invert(1); opacity: 0.7; }
+.footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); transition: color var(--transition); }
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--white); padding: 32px 5%; gap: 24px; align-items: flex-start; border-top: 1px solid var(--border); z-index: 999; }
+  .nav-links.open a { font-size: 18px; color: var(--navy); }
+  .nav-toggle { display: flex; }
+}
+@media (max-width: 600px) {
+  .articles-grid { grid-template-columns: 1fr; }
+  .blog-cta { padding: 28px 24px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="AI Process Lab" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">AI</div>
+    <span class="nav-logo-text">AI Process Lab</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#probleme">Pourquoi ?</a></li>
+    <li><a href="index.html#solution">Services</a></li>
+    <li><a href="index.html#tarifs">Offres</a></li>
+    <li><a href="index.html#apropos">À propos</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="https://app.youform.com/forms/giq4ql5u" class="nav-cta">Diagnostic gratuit</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="section-tag">Le blog</div>
+    <h1>Ce que vos prospects ne vous disent pas quand ils partent à la concurrence</h1>
+    <p>Pas de théorie. Des cas concrets, des chiffres réels, et des systèmes qui tournent. Pour les dirigeants qui veulent récupérer le chiffre d'affaires qui leur échappe chaque mois.</p>
+  </div>
+</div>
+
+<div class="blog-main">
+  <div class="articles-grid">
+
+    <a href="blog/automatiser-relances-commerciales-make.html" class="article-card">
+      <div class="article-card-top">
+        <div class="article-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+        </div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag">Make · Automatisation</span>
+        <h2 class="article-title">Votre devis envoyé il y a 15 jours n'a pas eu de réponse. Et maintenant ?</h2>
+        <p class="article-excerpt">La plupart des devis sans réponse auraient pu être signés avec une simple relance au bon moment. Voici comment ne plus jamais laisser passer cette fenêtre.</p>
+        <div class="article-meta">
+          <span>8 min de lecture</span>
+          <span class="article-read">Lire l'article →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/pipeline-commercial-airtable-tpe.html" class="article-card">
+      <div class="article-card-top">
+        <div class="article-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag">Airtable · CRM</span>
+        <h2 class="article-title">Vous gérez vos prospects sur Excel. Voici ce que ça vous coûte vraiment.</h2>
+        <p class="article-excerpt">Un fichier Excel ne relance pas tout seul, n'envoie pas de mails automatiques et n'analyse pas vos prospects. Voici ce que vous perdez chaque mois en restant sur cet outil.</p>
+        <div class="article-meta">
+          <span>10 min de lecture</span>
+          <span class="article-read">Lire l'article →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/cout-assistant-commercial-vs-automatisation.html" class="article-card">
+      <div class="article-card-top">
+        <div class="article-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg>
+        </div>
+      </div>
+      <div class="article-body">
+        <span class="article-tag">Stratégie · Budget</span>
+        <h2 class="article-title">Avant de recruter un assistant commercial ou ADV, lisez ça.</h2>
+        <p class="article-excerpt">Salaire, charges, onboarding, turnover : le coût réel d'un recrutement dépasse largement la fiche de paie. Comparatif chiffré avec l'automatisation, pour décider en connaissance de cause.</p>
+        <div class="article-meta">
+          <span>7 min de lecture</span>
+          <span class="article-read">Lire l'article →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div class="blog-cta">
+  <div class="blog-cta-text">
+    <h3>Vous voulez mettre cela en place pour votre activité ?</h3>
+    <p>30 minutes pour analyser votre cycle commercial et identifier ce que vous perdez chaque mois.</p>
+  </div>
+  <a href="https://app.youform.com/forms/giq4ql5u" class="blog-cta-btn">Réserver mon diagnostic gratuit →</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <img src="logo.png" alt="AI Process Lab" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text" style="display:none">AI Process Lab</span>
+    </a>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="mailto:yb@ai-process-lab.com">yb@ai-process-lab.com</a>
+    </div>
+    <span class="footer-copy">© 2026 AI Process Lab</span>
+  </div>
+</footer>
+
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+navToggle.addEventListener('click', function() {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen.toString());
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function() {
+    navLinks.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
+</body>
+</html>
