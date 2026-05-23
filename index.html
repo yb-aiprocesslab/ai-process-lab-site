@@ -759,7 +759,7 @@ footer {
 }
 
 .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.footer-logo-img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; }
+.footer-logo-img { height: 30px; width: auto; opacity: 0.85; }
 .footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7); }
 
 .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
@@ -987,6 +987,115 @@ footer {
 .tool-chip:hover { border-color: var(--blue); }
 .tool-chip img { width: 20px; height: 20px; object-fit: contain; }
 .tool-chip span { font-size: 13px; font-weight: 500; color: var(--navy); }
+
+/* ========== DASHBOARD LIGHTBOX ========== */
+.hero-dashboard-wrap {
+  cursor: zoom-in;
+}
+
+.dashboard-lightbox-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 3000;
+  background: rgba(10,20,40,0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+
+.dashboard-lightbox-overlay.active {
+  display: flex;
+}
+
+.dashboard-lightbox-inner {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.dashboard-lightbox-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  display: block;
+}
+
+.dashboard-lightbox-close {
+  position: absolute;
+  top: -44px; right: 0;
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: white; font-size: 18px;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.dashboard-lightbox-close:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+.dashboard-lightbox-hint {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+
+
+/* ========== COMPARATIF MOBILE ========== */
+.compare-mobile { display: none; }
+
+@media (max-width: 680px) {
+  .table-wrapper { display: none; }
+  .compare-mobile { display: block; margin-top: 32px; }
+
+  .compare-mobile-row {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px 18px;
+    margin-bottom: 10px;
+  }
+
+  .compare-mobile-critere {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .compare-mobile-cols {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+
+  .compare-mobile-col { text-align: center; }
+
+  .compare-mobile-col-label {
+    font-size: 10px; font-weight: 600; color: var(--text-muted);
+    margin-bottom: 5px; line-height: 1.3;
+  }
+
+  .compare-mobile-col-value {
+    font-size: 12px; color: var(--text-muted); line-height: 1.4;
+  }
+
+  .compare-mobile-col.highlight {
+    background: var(--blue-light);
+    border-radius: 8px; padding: 6px 4px;
+  }
+
+  .compare-mobile-col.highlight .compare-mobile-col-label {
+    color: var(--blue);
+  }
+
+  .compare-mobile-col.highlight .compare-mobile-col-value {
+    color: var(--navy); font-weight: 600;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1053,7 +1162,7 @@ footer {
         </div>
       </div>
     </div>
-    <div class="hero-dashboard-wrap" aria-label="Aperçu du dashboard AI Process Lab">
+    <div class="hero-dashboard-wrap" aria-label="Aperçu du dashboard AI Process Lab — cliquez pour agrandir" onclick="openDashboard()" title="Cliquer pour agrandir">
       <div class="hero-dashboard-inner">
         <img
           src="dashboard-preview.png"
@@ -1300,6 +1409,98 @@ footer {
           </tr>
         </tbody>
       </table>
+    </div>
+    <!-- VERSION MOBILE DU COMPARATIF -->
+    <div class="compare-mobile">
+      <div class="compare-mobile-row">
+        <div class="compare-mobile-critere">Coût mensuel</div>
+        <div class="compare-mobile-cols">
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Recrutement</div>
+            <div class="compare-mobile-col-value">2 000 € brut + charges</div>
+          </div>
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Agence</div>
+            <div class="compare-mobile-col-value">2 500 à 4 000 €</div>
+          </div>
+          <div class="compare-mobile-col highlight">
+            <div class="compare-mobile-col-label">✦ AI Process Lab</div>
+            <div class="compare-mobile-col-value">Fraction du coût d'un salarié</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-mobile-row">
+        <div class="compare-mobile-critere">Délai de démarrage</div>
+        <div class="compare-mobile-cols">
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Recrutement</div>
+            <div class="compare-mobile-col-value">4 à 12 semaines</div>
+          </div>
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Agence</div>
+            <div class="compare-mobile-col-value">2 à 6 semaines</div>
+          </div>
+          <div class="compare-mobile-col highlight">
+            <div class="compare-mobile-col-label">✦ AI Process Lab</div>
+            <div class="compare-mobile-col-value">Moins de 2 semaines</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-mobile-row">
+        <div class="compare-mobile-critere">Disponibilité</div>
+        <div class="compare-mobile-cols">
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Recrutement</div>
+            <div class="compare-mobile-col-value">Horaires de bureau</div>
+          </div>
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Agence</div>
+            <div class="compare-mobile-col-value">Variable</div>
+          </div>
+          <div class="compare-mobile-col highlight">
+            <div class="compare-mobile-col-label">✦ AI Process Lab</div>
+            <div class="compare-mobile-col-value">Réactivité garantie</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-mobile-row">
+        <div class="compare-mobile-critere">Risque</div>
+        <div class="compare-mobile-cols">
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Recrutement</div>
+            <div class="compare-mobile-col-value">Préavis, turnover</div>
+          </div>
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Agence</div>
+            <div class="compare-mobile-col-value">Dépendance prestataire</div>
+          </div>
+          <div class="compare-mobile-col highlight">
+            <div class="compare-mobile-col-label">✦ AI Process Lab</div>
+            <div class="compare-mobile-col-value">Système vous appartient</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-mobile-row">
+        <div class="compare-mobile-critere">Engagement</div>
+        <div class="compare-mobile-cols">
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Recrutement</div>
+            <div class="compare-mobile-col-value">CDI difficile à stopper</div>
+          </div>
+          <div class="compare-mobile-col">
+            <div class="compare-mobile-col-label">Agence</div>
+            <div class="compare-mobile-col-value">Contrat fixe</div>
+          </div>
+          <div class="compare-mobile-col highlight">
+            <div class="compare-mobile-col-label">✦ AI Process Lab</div>
+            <div class="compare-mobile-col-value">Sans engagement</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1571,6 +1772,17 @@ footer {
 </div>
 
 <script>
+
+<!-- DASHBOARD LIGHTBOX -->
+<div class="dashboard-lightbox-overlay" id="dashboard-lightbox" onclick="closeDashboard(event)">
+  <div class="dashboard-lightbox-inner">
+    <button class="dashboard-lightbox-close" onclick="closeDashboardBtn()" aria-label="Fermer">✕</button>
+    <img src="dashboard-preview.png" alt="Dashboard AI Process Lab" class="dashboard-lightbox-img">
+    <p class="dashboard-lightbox-hint">Cliquez en dehors de l'image pour fermer</p>
+  </div>
+</div>
+
+<script>
 // FAQ
 function toggleFaq(btn) {
   const item = btn.parentElement;
@@ -1619,6 +1831,32 @@ document.addEventListener('keydown', function(e) {
       navLinks.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
     }
+  }
+});
+
+
+// Dashboard lightbox
+function openDashboard() {
+  document.getElementById('dashboard-lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDashboardBtn() {
+  document.getElementById('dashboard-lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function closeDashboard(e) {
+  if (e.target === document.getElementById('dashboard-lightbox')) {
+    document.getElementById('dashboard-lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('dashboard-lightbox').classList.remove('active');
+    document.body.style.overflow = '';
   }
 });
 
