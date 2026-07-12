@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facturation électronique obligatoire 2026-2027 : ce que les TPE et PME doivent préparer | AI Process LAB</title>
+<meta name="description" content="La facturation électronique devient obligatoire pour toutes les entreprises françaises. Calendrier, obligations, choix de la plateforme : ce que votre TPE ou PME doit préparer dès maintenant.">
+<meta name="keywords" content="facturation électronique obligatoire 2026 2027, facture électronique TPE PME, PDP plateforme dématérialisation, réforme facturation électronique, Pennylane facturation, e-invoicing France">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ai-process-lab.com/blog/facturation-electronique-2027-tpe-pme.html">
+<meta property="og:title" content="Facturation électronique obligatoire 2026-2027 : ce que les TPE et PME doivent préparer">
+<meta property="og:description" content="Calendrier, obligations, choix de la plateforme : ce que votre TPE ou PME doit préparer dès maintenant.">
+<meta property="og:url" content="https://www.ai-process-lab.com/blog/facturation-electronique-2027-tpe-pme.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.ai-process-lab.com/logo.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Facturation électronique obligatoire 2026-2027 : ce que les TPE et PME doivent préparer","description":"Calendrier, obligations, choix de la plateforme : ce que votre TPE ou PME doit préparer dès maintenant.","author":{"@type":"Person","name":"Yacine B."},"publisher":{"@type":"Organization","name":"AI Process LAB","url":"https://www.ai-process-lab.com"},"datePublished":"2026-06-10","dateModified":"2026-06-10","keywords":"facturation électronique 2026 2027, TPE PME, PDP, réforme facturation"}
+</script>
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #0D2B4E; --blue: #2D6BE4; --blue-hover: #1a57d4; --blue-light: #E8F0FD; --bg: #F8F9FB; --bg-alt: #F1F4F8; --white: #FFFFFF; --text: #1A2B3C; --text-muted: #6B7A8D; --border: #E2E8F0; --shadow: 0 1px 3px rgba(13,43,78,0.06), 0 4px 16px rgba(13,43,78,0.08); --radius: 12px; --transition: 0.2s ease; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+h1,h2,h3,h4 { font-family: 'Sora', sans-serif; color: var(--navy); line-height: 1.25; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(248,249,251,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); height: 68px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.nav-logo-img { height: 34px; }
+.nav-logo-fallback { width: 32px; height: 32px; background: var(--navy); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 12px; color: white; }
+.nav-logo-text { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+.nav-links a:hover { color: var(--navy); }
+.nav-cta { background: var(--blue) !important; color: white !important; padding: 9px 18px; border-radius: 8px; font-weight: 500 !important; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; margin-left: auto; touch-action: manipulation; }
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+.nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.article-wrapper { max-width: 740px; margin: 0 auto; padding: 110px 5% 80px; }
+.article-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
+.article-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.article-breadcrumb a:hover { color: var(--blue); }
+.article-breadcrumb span { color: var(--border); }
+.article-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-light); color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+.article-title { font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
+.article-meta-bar { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); padding-bottom: 28px; border-bottom: 1px solid var(--border); margin-bottom: 40px; flex-wrap: wrap; }
+.article-meta-bar strong { color: var(--navy); }
+.article-content { font-size: 16px; line-height: 1.85; color: var(--text); }
+.article-content p { margin-bottom: 20px; }
+.article-content h2 { font-size: clamp(20px, 2.5vw, 26px); font-weight: 700; color: var(--navy); margin: 44px 0 16px; }
+.article-content h3 { font-size: 18px; font-weight: 600; color: var(--navy); margin: 28px 0 12px; }
+.article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 20px; }
+.article-content li { margin-bottom: 8px; }
+.article-content strong { color: var(--navy); font-weight: 600; }
+.callout { background: var(--blue-light); border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; margin: 28px 0; font-size: 15px; color: var(--navy); }
+.callout strong { color: var(--blue); display: block; margin-bottom: 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+.callout-warning { background: #FFFBEB; border-left-color: #D97706; }
+.callout-warning strong { color: #D97706; }
+.timeline-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 14px; }
+.timeline-table th { padding: 14px 18px; background: var(--navy); color: white; font-family: 'Sora', sans-serif; font-weight: 600; text-align: left; font-size: 13px; }
+.timeline-table td { padding: 13px 18px; border-top: 1px solid var(--border); background: var(--white); }
+.timeline-table tr:nth-child(even) td { background: var(--bg-alt); }
+.timeline-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+.related-articles { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-top: 48px; }
+.related-articles h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px; }
+.related-link { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); transition: color var(--transition); }
+.related-link:last-child { border-bottom: none; padding-bottom: 0; }
+.related-link:hover { color: var(--blue); text-decoration: none; }
+.related-link-arrow { color: var(--blue); font-size: 18px; flex-shrink: 0; }
+.related-link-text { font-size: 14px; font-weight: 500; }
+.back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); font-size: 14px; text-decoration: none; margin-top: 40px; transition: color var(--transition); }
+.back-link:hover { color: var(--blue); text-decoration: none; }
+.article-cta { background: var(--navy); border-radius: 16px; padding: 36px 40px; margin: 48px 0 0; text-align: center; }
+.article-cta h3 { font-size: 22px; color: white; margin-bottom: 10px; }
+.article-cta p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+.article-cta a { display: inline-block; background: var(--blue); color: white; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all var(--transition); box-shadow: 0 4px 14px rgba(45,107,228,0.3); }
+.article-cta a:hover { background: var(--blue-hover); transform: translateY(-2px); }
+footer { background: var(--navy); padding: 32px 5%; margin-top: 64px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-logo-img { height: 28px; opacity: 0.85; }
+.footer-logo-text { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+#mobile-menu-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: var(--navy); flex-direction: column; align-items: stretch; justify-content: flex-start; overflow-y: auto; }
+#mobile-menu-overlay.active { display: flex; }
+.mobile-menu-header { display: flex; align-items: center; justify-content: space-between; padding: 0 6%; height: 68px; border-bottom: 1px solid rgba(255,255,255,0.1); flex-shrink: 0; }
+.mobile-menu-logo-text { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 600; color: white; }
+.mobile-menu-close { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; font-size: 20px; }
+.mobile-menu-links { display: flex; flex-direction: column; padding: 16px 6% 32px; gap: 0; flex: 1; }
+.mobile-menu-links a { display: block; font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 600; color: white; text-decoration: none; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.mobile-menu-links a:last-child { border-bottom: none; }
+.mobile-menu-cta { margin: 24px 6%; display: block; background: var(--blue); color: white; text-align: center; padding: 18px 24px; border-radius: 12px; font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; }
+@media (max-width: 900px) { .nav-links { display: none; } .nav-toggle { display: flex; } }
+@media (max-width: 500px) { .article-cta { padding: 28px 24px; } .footer-inner { flex-direction: column; align-items: flex-start; } .timeline-table { font-size: 12px; } .timeline-table th, .timeline-table td { padding: 10px 12px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo.png" alt="AI Process LAB" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">AI</div>
+    <span class="nav-logo-text">AI Process LAB</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="../index.html#solution">Services</a></li>
+    <li><a href="../index.html#tarifs">Offres</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li><a href="https://app.youform.com/forms/giq4ql5u" class="nav-cta">Diagnostic gratuit</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div id="mobile-menu-overlay" role="dialog" aria-modal="true" style="display:none;">
+  <div class="mobile-menu-header">
+    <span class="mobile-menu-logo-text">AI Process LAB</span>
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fermer">✕</button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="../index.html#solution" class="mobile-nav-link">Services</a>
+    <a href="../index.html#tarifs" class="mobile-nav-link">Offres</a>
+    <a href="../blog.html" class="mobile-nav-link">Blog</a>
+    <a href="../index.html#apropos" class="mobile-nav-link">À propos</a>
+  </div>
+  <a href="https://app.youform.com/forms/giq4ql5u" class="mobile-menu-cta">Réserver mon diagnostic gratuit →</a>
+</div>
+
+<div class="article-wrapper">
+  <div class="article-breadcrumb">
+    <a href="../index.html">Accueil</a><span>/</span>
+    <a href="../blog.html">Blog</a><span>/</span>
+    Facturation électronique 2026-2027
+  </div>
+
+  <div class="article-tag">Facturation électronique · Réglementation</div>
+  <h1 class="article-title">Facturation électronique obligatoire : ce que votre TPE ou PME doit préparer avant les échéances.</h1>
+  <div class="article-meta-bar">
+    <span>Par <strong>Yacine B.</strong></span>
+    <span>8 min de lecture</span>
+    <span>Réglementation · Facturation · TPE PME</span>
+  </div>
+
+  <div class="article-content">
+
+    <p>La réforme de la facturation électronique concerne toutes les entreprises françaises assujetties à la TVA, quelle que soit leur taille. Micro-entreprise, TPE, PME : personne n'y échappe. Et contrairement à ce que beaucoup de dirigeants pensent, la première échéance n'est pas en 2027. Elle est en septembre 2026.</p>
+
+    <p>Cet article fait le point sur ce qui change concrètement, sur le calendrier réel, et sur ce que vous devez préparer dès maintenant pour ne pas subir la transition dans l'urgence.</p>
+
+    <h2>Ce que la réforme change concrètement</h2>
+
+    <p>Aujourd'hui, vous envoyez vos factures comme vous voulez : PDF par mail, papier, ou via un logiciel. Demain, ce ne sera plus possible entre entreprises françaises. Toutes les factures B2B devront transiter par des plateformes agréées par l'État, appelées Plateformes de Dématérialisation Partenaires, ou PDP.</p>
+
+    <p>Concrètement, votre facture ne partira plus de votre boîte mail vers celle de votre client. Elle passera par une plateforme certifiée qui la transmettra au destinataire dans un format structuré et normalisé, avec transmission automatique des données à l'administration fiscale.</p>
+
+    <p>La réforme repose sur deux obligations distinctes qu'il ne faut pas confondre : la réception et l'émission.</p>
+
+    <h2>Le calendrier réel des échéances</h2>
+
+    <table class="timeline-table">
+      <thead><tr><th>Échéance</th><th>Obligation</th><th>Qui est concerné</th></tr></thead>
+      <tbody>
+        <tr><td>Septembre 2026</td><td>Réception obligatoire des factures électroniques</td><td>Toutes les entreprises, y compris TPE et micro-entreprises</td></tr>
+        <tr><td>Septembre 2026</td><td>Émission obligatoire</td><td>Grandes entreprises et ETI</td></tr>
+        <tr><td>Septembre 2027</td><td>Émission obligatoire</td><td>TPE, PME et micro-entreprises</td></tr>
+      </tbody>
+    </table>
+
+    <p>Le point que beaucoup de dirigeants de petites structures ratent : dès septembre 2026, vous devez être capable de recevoir des factures électroniques. Si vos fournisseurs sont des grandes entreprises ou des ETI, ils vous enverront leurs factures via une PDP dès cette date. Sans plateforme de réception configurée, vous ne recevrez plus leurs factures correctement.</p>
+
+    <div class="callout callout-warning">
+      <strong>À retenir</strong>
+      L'obligation de réception arrive un an avant l'obligation d'émission pour les TPE et PME. Attendre 2027 pour s'en occuper, c'est prendre le risque de rater des factures fournisseurs dès la rentrée 2026.
+    </div>
+
+    <h2>Ce que ça implique pour votre organisation</h2>
+
+    <p>La réforme n'est pas qu'une contrainte technique. Elle touche directement votre processus de facturation quotidien, et par extension votre trésorerie.</p>
+
+    <h3>Le choix de la plateforme</h3>
+
+    <p>Vous devrez choisir une PDP parmi les plateformes en cours de certification par l'administration. Les principaux acteurs du marché français de la gestion financière se positionnent : éditeurs de logiciels comptables, solutions de facturation, banques. Chaque plateforme a ses spécificités en termes de tarifs, d'intégrations et de fonctionnalités.</p>
+
+    <p>Le critère qui compte vraiment pour une TPE ou PME : la capacité de la plateforme à s'intégrer avec vos outils existants. Une PDP isolée qui vous oblige à ressaisir vos factures manuellement vous fait perdre le bénéfice de la dématérialisation.</p>
+
+    <h3>La fin de la facture PDF artisanale</h3>
+
+    <p>Si vous générez aujourd'hui vos factures sur Word ou Excel avant de les envoyer en PDF par mail, ce processus disparaît pour vos clients professionnels français. La facture devra être émise dans un format structuré (Factur-X, UBL ou CII) que ces outils bureautiques ne produisent pas nativement.</p>
+
+    <p>C'est l'occasion de repenser l'ensemble de votre chaîne de facturation plutôt que de rajouter une étape manuelle de plus à un processus déjà chronophage.</p>
+
+    <h2>Le bon réflexe : intégrer la conformité dans un système automatisé</h2>
+
+    <p>Beaucoup d'entreprises vont traiter cette réforme comme une contrainte isolée : choisir une PDP, s'y connecter, et continuer à gérer le reste manuellement. C'est une occasion manquée.</p>
+
+    <p>La vraie opportunité est de profiter de cette obligation réglementaire pour automatiser l'ensemble du cycle : le devis accepté génère automatiquement la facture, la facture part automatiquement via la plateforme certifiée, les relances d'impayés se déclenchent automatiquement selon vos délais. La conformité devient un sous-produit d'un système qui vous fait gagner du temps au quotidien.</p>
+
+    <p>C'est l'approche que je déploie chez mes clients. Je travaille avec les principales plateformes françaises en cours de certification PDP, notamment Pennylane et Sellsy, et je retiens celle qui correspond le mieux au contexte de chaque entreprise : outils déjà en place, volume de facturation, besoins comptables. Le système que je mets en place connecte le cycle commercial complet à la facturation conforme : dès qu'un devis passe en accepté, la facture est créée dans la plateforme, envoyée au client sans intervention manuelle, dans le format requis par la réforme.</p>
+
+    <div class="callout">
+      <strong>L'avantage d'anticiper</strong>
+      Les entreprises qui intègrent la facturation électronique dans un système automatisé dès maintenant font d'une pierre deux coups : elles sont conformes avant l'échéance, et elles éliminent les tâches manuelles de facturation qui leur coûtent des heures chaque mois.
+    </div>
+
+    <h2>Les questions à vous poser dès maintenant</h2>
+
+    <ul>
+      <li><strong>Comment sont générées vos factures aujourd'hui ?</strong> Si la réponse est Word, Excel ou un PDF artisanal, votre processus actuel ne passera pas la réforme.</li>
+      <li><strong>Votre outil de facturation actuel sera-t-il certifié PDP ?</strong> Vérifiez auprès de votre éditeur. Certains logiciels ne seront jamais certifiés et nécessiteront un raccordement à une plateforme tierce.</li>
+      <li><strong>Votre facturation est-elle connectée à votre cycle commercial ?</strong> Si vos devis et vos factures vivent dans des outils séparés avec ressaisie manuelle, la réforme est le bon moment pour connecter l'ensemble.</li>
+      <li><strong>Qui gère la transition dans votre structure ?</strong> Dans une TPE, c'est souvent le dirigeant lui-même. Anticiper évite de gérer ça dans l'urgence en plus du quotidien.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+
+    <p>La facturation électronique n'est pas une option, c'est une échéance ferme avec des dates connues. Les TPE et PME qui s'y préparent en 2026 la vivront comme une simple formalité. Celles qui attendent la dernière minute la subiront dans l'urgence, avec le risque de bloquer leur facturation, donc leur trésorerie.</p>
+
+    <p>Si vous voulez évaluer où en est votre processus de facturation actuel et comment le rendre à la fois conforme et automatisé, le diagnostic gratuit de 30 minutes est le bon point de départ.</p>
+
+  </div>
+
+  <div class="related-articles">
+    <h3>Articles qui pourraient vous intéresser</h3>
+    <a href="outil-suivi-commercial-pertes-opportunites.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Vous avez un outil de suivi commercial. Pourquoi vous perdez quand même des opportunités.</span>
+    </a>
+    <a href="automatiser-relances-commerciales-make.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Votre devis envoyé il y a 15 jours n'a pas eu de réponse. Et maintenant ?</span>
+    </a>
+    <a href="cout-assistant-commercial-vs-automatisation.html" class="related-link">
+      <span class="related-link-arrow">→</span>
+      <span class="related-link-text">Avant de recruter un assistant commercial ou ADV, lisez ça.</span>
+    </a>
+  </div>
+
+  <a href="../blog.html" class="back-link">← Retour au blog</a>
+
+  <div class="article-cta">
+    <h3>Votre facturation est-elle prête pour 2026 ?</h3>
+    <p>30 minutes pour évaluer votre processus actuel et voir comment le rendre conforme et automatisé en une seule fois.</p>
+    <a href="https://app.youform.com/forms/giq4ql5u">Réserver mon diagnostic gratuit →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../index.html" class="footer-logo">
+      <img src="../logo.png" alt="AI Process LAB" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text" style="display:none">AI Process LAB</span>
+    </a>
+    <div class="footer-links">
+      <a href="../index.html">Accueil</a>
+      <a href="../blog.html">Blog</a>
+      <a href="mailto:yb@ai-process-lab.com">Contact</a>
+    </div>
+    <span class="footer-copy">© 2026 AI Process LAB</span>
+  </div>
+</footer>
+
+<script>
+var navToggle = document.getElementById('nav-toggle');
+var mobileOverlay = document.getElementById('mobile-menu-overlay');
+var mobileClose = document.getElementById('mobile-menu-close');
+
+function closeNav() {
+  if (mobileOverlay) { mobileOverlay.classList.remove('active'); mobileOverlay.style.display = 'none'; }
+  navToggle.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+navToggle.addEventListener('click', function() {
+  var isOpen = !mobileOverlay.classList.contains('active');
+  if (isOpen) {
+    mobileOverlay.style.display = 'flex';
+    mobileOverlay.classList.add('active');
+    navToggle.classList.add('is-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  } else { closeNav(); }
+});
+
+if (mobileClose) { mobileClose.addEventListener('click', closeNav); }
+document.querySelectorAll('.mobile-nav-link, .mobile-menu-cta').forEach(function(link) {
+  link.addEventListener('click', function() { closeNav(); });
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeNav(); }
+});
+</script>
+</body>
+</html>
